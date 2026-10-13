@@ -1,0 +1,29 @@
+# Local learning records and development scratch
+work/
+drafts/
+answer-import-backups/
+runs/
+test-state*/
+ui-state*/
+compiler-0.9.27/
+scores.tsv
+verification.txt
+ui-verification.txt
+
+# IDE and build scratch
+.vs/
+.idea/
+obj/
+bin/
+*.user
+*.suo
+*.pdb
+*.tmp
+*.log
+/Feng_C语言练习器_ver1.0.1.exe
+
+# Credentials
+.env
+.env.*
+*.pem
+*.key

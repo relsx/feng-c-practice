@@ -1,0 +1,421 @@
+﻿Feng's C语言练习器 ver1.0.1 验证报告
+By Feng; 仅供学习使用；Email：feng111@bupt.edu.cn
+发布日期：2026-10-13
+
+功能基线验证（顶部配色调整前）：90 道标准答案 × 2 个种子 × 28 组输入 = 5040 组，全部通过。
+完整自检 207 项通过，包含错误输出、编译错误、简洁度扣分、注释/空白处理、死循环、输出限制、崩溃、内存限制、停止与种子复现。
+编辑器：6 个字号（14/16/18/20/22/24）× 3 个布局缩放（100%/150%/200%），1134 个字符位置命中、18 次真实鼠标点击、18 次跨行鼠标拖选，均通过。
+另验证语法颜色、撤销、替换、滚动、中文、Tab、LF/CRLF 换行、草稿状态稳定、答案逐步展开、导入原稿备份、自动保存、主界面实际输出、编译诊断、1 秒庆祝动画、2560×1600 的 96/144/192 DPI 渲染。
+仅含 EXE 的新目录启动成功；内嵌编辑器加载成功，内嵌编译器释放及 27 项运行自检成功。
+原有两个 EXE 的 SHA-256 与更新前一致；测试使用工作目录中的独立记录，未写入个人练习记录。
+测试覆盖以上场景；没有逐一验证所有硬件、显示器组合与任意用户代码。
+
+本次深蓝色调整：只修改顶部背景与文字颜色，重新编译并检查 2.5K 界面显示。以下为功能基线的完整验证记录。
+
+===== 完整判题与评分自检 =====
+PASS 01 两数之和 seed=20261012 score=100
+PASS 01 两数之和 seed=1234567 score=100
+PASS 02 两数之差 seed=20261012 score=100
+PASS 02 两数之差 seed=1234567 score=100
+PASS 03 两数之积 seed=20261012 score=100
+PASS 03 两数之积 seed=1234567 score=100
+PASS 04 商和余数 seed=20261012 score=100
+PASS 04 商和余数 seed=1234567 score=100
+PASS 05 三个数的平均值 seed=20261012 score=100
+PASS 05 三个数的平均值 seed=1234567 score=100
+PASS 06 摄氏转华氏 seed=20261012 score=100
+PASS 06 摄氏转华氏 seed=1234567 score=100
+PASS 07 圆的面积 seed=20261012 score=100
+PASS 07 圆的面积 seed=1234567 score=100
+PASS 08 交换两个数 seed=20261012 score=100
+PASS 08 交换两个数 seed=1234567 score=100
+PASS 09 绝对值 seed=20261012 score=100
+PASS 09 绝对值 seed=1234567 score=100
+PASS 10 两点距离的平方 seed=20261012 score=100
+PASS 10 两点距离的平方 seed=1234567 score=100
+PASS 11 较大的数 seed=20261012 score=100
+PASS 11 较大的数 seed=1234567 score=100
+PASS 12 三个数的最大值 seed=20261012 score=100
+PASS 12 三个数的最大值 seed=1234567 score=100
+PASS 13 奇数或偶数 seed=20261012 score=100
+PASS 13 奇数或偶数 seed=1234567 score=100
+PASS 14 判断正负 seed=20261012 score=100
+PASS 14 判断正负 seed=1234567 score=100
+PASS 15 判断闰年 seed=20261012 score=100
+PASS 15 判断闰年 seed=1234567 score=100
+PASS 16 成绩等级 seed=20261012 score=100
+PASS 16 成绩等级 seed=1234567 score=100
+PASS 17 三角形类型 seed=20261012 score=100
+PASS 17 三角形类型 seed=1234567 score=100
+PASS 18 字符分类 seed=20261012 score=100
+PASS 18 字符分类 seed=1234567 score=100
+PASS 19 简易计算器 seed=20261012 score=100
+PASS 19 简易计算器 seed=1234567 score=100
+PASS 20 月份天数 seed=20261012 score=100
+PASS 20 月份天数 seed=1234567 score=100
+PASS 21 从 1 加到 n seed=20261012 score=100
+PASS 21 从 1 加到 n seed=1234567 score=100
+PASS 22 阶乘 seed=20261012 score=100
+PASS 22 阶乘 seed=1234567 score=100
+PASS 23 斐波那契数 seed=20261012 score=100
+PASS 23 斐波那契数 seed=1234567 score=100
+PASS 24 数字各位之和 seed=20261012 score=100
+PASS 24 数字各位之和 seed=1234567 score=100
+PASS 25 整数反转 seed=20261012 score=100
+PASS 25 整数反转 seed=1234567 score=100
+PASS 26 判断素数 seed=20261012 score=100
+PASS 26 判断素数 seed=1234567 score=100
+PASS 27 最大公约数 seed=20261012 score=100
+PASS 27 最大公约数 seed=1234567 score=100
+PASS 28 最小公倍数 seed=20261012 score=100
+PASS 28 最小公倍数 seed=1234567 score=100
+PASS 29 整数幂 seed=20261012 score=100
+PASS 29 整数幂 seed=1234567 score=100
+PASS 30 数字位数 seed=20261012 score=100
+PASS 30 数字位数 seed=1234567 score=100
+PASS 31 统计区间素数 seed=20261012 score=100
+PASS 31 统计区间素数 seed=1234567 score=100
+PASS 32 奇数求和 seed=20261012 score=100
+PASS 32 奇数求和 seed=1234567 score=100
+PASS 33 一行乘法表 seed=20261012 score=100
+PASS 33 一行乘法表 seed=1234567 score=100
+PASS 34 判断完全数 seed=20261012 score=100
+PASS 34 判断完全数 seed=1234567 score=100
+PASS 35 阿姆斯特朗数 seed=20261012 score=100
+PASS 35 阿姆斯特朗数 seed=1234567 score=100
+PASS 36 正因子个数 seed=20261012 score=100
+PASS 36 正因子个数 seed=1234567 score=100
+PASS 37 平方和 seed=20261012 score=100
+PASS 37 平方和 seed=1234567 score=100
+PASS 38 转换二进制 seed=20261012 score=100
+PASS 38 转换二进制 seed=1234567 score=100
+PASS 39 二进制中 1 的个数 seed=20261012 score=100
+PASS 39 二进制中 1 的个数 seed=1234567 score=100
+PASS 40 回文整数 seed=20261012 score=100
+PASS 40 回文整数 seed=1234567 score=100
+PASS 41 数组求和 seed=20261012 score=100
+PASS 41 数组求和 seed=1234567 score=100
+PASS 42 数组最大值 seed=20261012 score=100
+PASS 42 数组最大值 seed=1234567 score=100
+PASS 43 数组最小值 seed=20261012 score=100
+PASS 43 数组最小值 seed=1234567 score=100
+PASS 44 数组逆序 seed=20261012 score=100
+PASS 44 数组逆序 seed=1234567 score=100
+PASS 45 数组升序排序 seed=20261012 score=100
+PASS 45 数组升序排序 seed=1234567 score=100
+PASS 46 查找首个下标 seed=20261012 score=100
+PASS 46 查找首个下标 seed=1234567 score=100
+PASS 47 统计达标元素 seed=20261012 score=100
+PASS 47 统计达标元素 seed=1234567 score=100
+PASS 48 不同元素个数 seed=20261012 score=100
+PASS 48 不同元素个数 seed=1234567 score=100
+PASS 49 数组循环右移 seed=20261012 score=100
+PASS 49 数组循环右移 seed=1234567 score=100
+PASS 50 数组前缀和 seed=20261012 score=100
+PASS 50 数组前缀和 seed=1234567 score=100
+PASS 51 字符串长度 seed=20261012 score=100
+PASS 51 字符串长度 seed=1234567 score=100
+PASS 52 反转字符串 seed=20261012 score=100
+PASS 52 反转字符串 seed=1234567 score=100
+PASS 53 统计元音 seed=20261012 score=100
+PASS 53 统计元音 seed=1234567 score=100
+PASS 54 回文字符串 seed=20261012 score=100
+PASS 54 回文字符串 seed=1234567 score=100
+PASS 55 统计数字字符 seed=20261012 score=100
+PASS 55 统计数字字符 seed=1234567 score=100
+PASS 56 转换大写 seed=20261012 score=100
+PASS 56 转换大写 seed=1234567 score=100
+PASS 57 统计单词 seed=20261012 score=100
+PASS 57 统计单词 seed=1234567 score=100
+PASS 58 替换指定字符 seed=20261012 score=100
+PASS 58 替换指定字符 seed=1234567 score=100
+PASS 59 字符出现次数 seed=20261012 score=100
+PASS 59 字符出现次数 seed=1234567 score=100
+PASS 60 矩阵主对角线之和 seed=20261012 score=100
+PASS 60 矩阵主对角线之和 seed=1234567 score=100
+PASS 61 指针交换 seed=20261012 score=100
+PASS 61 指针交换 seed=1234567 score=100
+PASS 62 指针遍历求和 seed=20261012 score=100
+PASS 62 指针遍历求和 seed=1234567 score=100
+PASS 63 递归阶乘 seed=20261012 score=100
+PASS 63 递归阶乘 seed=1234567 score=100
+PASS 64 递归最大公约数 seed=20261012 score=100
+PASS 64 递归最大公约数 seed=1234567 score=100
+PASS 65 二分查找首位置 seed=20261012 score=100
+PASS 65 二分查找首位置 seed=1234567 score=100
+PASS 66 合并有序数组 seed=20261012 score=100
+PASS 66 合并有序数组 seed=1234567 score=100
+PASS 67 有序数组去重 seed=20261012 score=100
+PASS 67 有序数组去重 seed=1234567 score=100
+PASS 68 众数与次数 seed=20261012 score=100
+PASS 68 众数与次数 seed=1234567 score=100
+PASS 69 第二大不同值 seed=20261012 score=100
+PASS 69 第二大不同值 seed=1234567 score=100
+PASS 70 最大连续子段和 seed=20261012 score=100
+PASS 70 最大连续子段和 seed=1234567 score=100
+PASS 71 固定窗口最大和 seed=20261012 score=100
+PASS 71 固定窗口最大和 seed=1234567 score=100
+PASS 72 前缀和区间查询 seed=20261012 score=100
+PASS 72 前缀和区间查询 seed=1234567 score=100
+PASS 73 矩阵转置 seed=20261012 score=100
+PASS 73 矩阵转置 seed=1234567 score=100
+PASS 74 矩阵乘法 seed=20261012 score=100
+PASS 74 矩阵乘法 seed=1234567 score=100
+PASS 75 二维行列式 seed=20261012 score=100
+PASS 75 二维行列式 seed=1234567 score=100
+PASS 76 子串出现次数 seed=20261012 score=100
+PASS 76 子串出现次数 seed=1234567 score=100
+PASS 77 连续字符压缩 seed=20261012 score=100
+PASS 77 连续字符压缩 seed=1234567 score=100
+PASS 78 括号配对检查 seed=20261012 score=100
+PASS 78 括号配对检查 seed=1234567 score=100
+PASS 79 大整数加法 seed=20261012 score=100
+PASS 79 大整数加法 seed=1234567 score=100
+PASS 80 结构体成绩排名 seed=20261012 score=100
+PASS 80 结构体成绩排名 seed=1234567 score=100
+PASS 81 链表逆序输出 seed=20261012 score=100
+PASS 81 链表逆序输出 seed=1234567 score=100
+PASS 82 栈命令处理 seed=20261012 score=100
+PASS 82 栈命令处理 seed=1234567 score=100
+PASS 83 队列命令处理 seed=20261012 score=100
+PASS 83 队列命令处理 seed=1234567 score=100
+PASS 84 带障碍网格路径数 seed=20261012 score=100
+PASS 84 带障碍网格路径数 seed=1234567 score=100
+PASS 85 最少硬币数 seed=20261012 score=100
+PASS 85 最少硬币数 seed=1234567 score=100
+PASS 86 最长严格递增子序列 seed=20261012 score=100
+PASS 86 最长严格递增子序列 seed=1234567 score=100
+PASS 87 迷宫最短距离 seed=20261012 score=100
+PASS 87 迷宫最短距离 seed=1234567 score=100
+PASS 88 项目考试 · 学生成绩管理 seed=20261012 score=100
+PASS 88 项目考试 · 学生成绩管理 seed=1234567 score=100
+PASS 89 项目考试 · 仓储订单系统 seed=20261012 score=100
+PASS 89 项目考试 · 仓储订单系统 seed=1234567 score=100
+PASS 90 项目考试 · 图书借阅系统 seed=20261012 score=100
+PASS 90 项目考试 · 图书借阅系统 seed=1234567 score=100
+PASS Comments and blank lines do not penalize code
+PASS Whitespace and comment markers inside literals are preserved
+PASS Minifying does not hide statement count
+PASS Line threshold and linear penalty boundaries
+PASS Correct bloated code loses 10 simplicity points
+PASS Whitespace normalization
+PASS 64-bit integer exactness
+PASS Float absolute tolerance
+PASS Float precision rejection
+PASS NaN rejection
+PASS Infinity rejection
+PASS Binary string exactness
+PASS Numeric-looking string exactness
+PASS Extra output rejection
+PASS Wrong answer score zero and per-case diagnosis
+PASS Compiler line error
+PASS timeout compilation
+DETAIL timeout: 运行超时（0.3 秒）, output=0, elapsed=258.7326
+PASS Timeout enforcement
+PASS flood compilation
+DETAIL flood: 输出超过 64 KiB 限制, output=65394, elapsed=93.3768
+PASS Output flood limit
+PASS crash compilation
+DETAIL crash: 异常退出（代码 -1073741819 / 0xC0000005）, output=0, elapsed=39.3174
+PASS Crash detection
+PASS memory compilation
+DETAIL memory: , output=9, elapsed=38.2332
+PASS 256MiB memory limit
+PASS Cancellation terminates process
+PASS Seed reproduces inputs
+PASS Fresh seeds produce new random inputs
+
+TOTAL 207, FAILED 0, ALL PASSED
+
+===== 界面与编辑对齐 =====
+PASS 90 questions ending with project exams
+PASS Large code workspace alongside results
+PASS Right-side results panel is visible
+PASS Answers begin with hint only
+PASS Reveal enables code and import
+PASS One-click answer import requested
+PASS Import replaces editor with exact reference answer
+PASS Original draft is backed up before importing answer
+PASS Imported answer is saved as current draft
+PASS Actual mouse click aligns at font 14 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 14 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 16 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 16 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 18 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 18 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 20 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 20 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 22 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 22 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 24 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 24 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 14 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 14 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 16 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 16 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 18 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 18 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 20 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 20 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 22 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 22 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 24 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 24 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 14 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 14 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 16 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 16 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 18 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 18 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 20 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 20 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 22 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 22 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 24 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 24 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Coordinate coverage 1134 hits / 18 clicks / 18 drags
+PASS C keyword uses colored syntax section
+PASS Comments have their own syntax color
+PASS Tab caret matches inserted spaces with newline length 1
+PASS Enter indentation exact with newline length 1
+PASS Tab caret matches inserted spaces with newline length 2
+PASS Enter indentation exact with newline length 2
+PASS Highlight redraw leaves draft status, text and caret stable
+PASS GUI compiles embedded answer and grades 100
+PASS Main results show all 28 selectable actual outputs
+PASS Celebration lasts 1000ms
+PASS Celebration finishes naturally
+PASS Incorrect output appears in main panel and score zero
+PASS Compiler diagnostics appear in main results panel
+PASS Requirements and hints do not overlap at 96 DPI
+PASS Usable editor at 2560x1600 / 96 DPI
+PASS Requirements and hints do not overlap at 144 DPI
+PASS Usable editor at 2560x1600 / 144 DPI
+PASS Requirements and hints do not overlap at 192 DPI
+PASS Usable editor at 2560x1600 / 192 DPI
+ALL UI CHECKS PASSED
+
+===== 独立 EXE 运行 =====
+PASS Comments and blank lines do not penalize code
+PASS Whitespace and comment markers inside literals are preserved
+PASS Minifying does not hide statement count
+PASS Line threshold and linear penalty boundaries
+PASS Correct bloated code loses 10 simplicity points
+PASS Whitespace normalization
+PASS 64-bit integer exactness
+PASS Float absolute tolerance
+PASS Float precision rejection
+PASS NaN rejection
+PASS Infinity rejection
+PASS Binary string exactness
+PASS Numeric-looking string exactness
+PASS Extra output rejection
+PASS Wrong answer score zero and per-case diagnosis
+PASS Compiler line error
+PASS timeout compilation
+DETAIL timeout: 运行超时（0.3 秒）, output=0, elapsed=260.2716
+PASS Timeout enforcement
+PASS flood compilation
+DETAIL flood: 输出超过 64 KiB 限制, output=65457, elapsed=82.0961
+PASS Output flood limit
+PASS crash compilation
+DETAIL crash: 异常退出（代码 -1073741819 / 0xC0000005）, output=0, elapsed=37.4802
+PASS Crash detection
+PASS memory compilation
+DETAIL memory: , output=9, elapsed=37.3346
+PASS 256MiB memory limit
+PASS Cancellation terminates process
+PASS Seed reproduces inputs
+PASS Fresh seeds produce new random inputs
+
+TOTAL 27, FAILED 0, ALL PASSED
