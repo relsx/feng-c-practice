@@ -21,3 +21,9 @@
 - 二进制包 SHA-256：`34a721949a2583fdff725312da092fa0f5f1f284b702e6f811c6954714faabb2`
 
 编译器与编辑器各自保留原作者的版权与许可声明。
+
+## 动画素材
+
+Kenney Particle Pack 1.1 的 `smoke_05.png` 和 `spark_04.png`，来源：https://kenney.nl/assets/particle-pack ，CC0。原始许可见 `assets/Kenney-License.txt`。
+
+人物透明插画由本项目使用内置 image_gen 工具生成。素材、最终提示与来源说明见 `assets/素材说明.md`；所有运行所需素材均内嵌 EXE，离线使用无需下载。

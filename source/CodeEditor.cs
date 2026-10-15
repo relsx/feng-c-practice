@@ -7,6 +7,7 @@ using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Rendering;
 using System.Xml;
 using System.IO;
+using System.Windows.Input;
 sealed class EditorInput : TextEditor {
  public event EventHandler SelectionChanged;
  public EditorInput(){TextArea.SelectionChanged+=(s,e)=>{if(SelectionChanged!=null)SelectionChanged(this,e);};TextArea.Caret.PositionChanged+=(s,e)=>{if(SelectionChanged!=null)SelectionChanged(this,e);};}
@@ -19,6 +20,14 @@ sealed class EditorInput : TextEditor {
 sealed class CodeEditor : Grid {
  public EditorInput Input{get;private set;}
  public event EventHandler CodeChanged;
+ Button undoButton,redoButton;
+ public bool CanUndo{get{return !Input.IsReadOnly&&Input.Document.UndoStack.CanUndo;}}
+ public bool CanRedo{get{return !Input.IsReadOnly&&Input.Document.UndoStack.CanRedo;}}
+ public void Undo(){if(CanUndo)Input.Undo();UpdateHistory();Input.Focus();}
+ public void Redo(){if(CanRedo)Input.Redo();UpdateHistory();Input.Focus();}
+ public void AttachHistory(Button undo,Button redo){undoButton=undo;redoButton=redo;undo.Click+=(s,e)=>Undo();redo.Click+=(s,e)=>Redo();Input.Document.UndoStack.PropertyChanged+=(s,e)=>UpdateHistory();Input.IsEnabledChanged+=(s,e)=>UpdateHistory();UpdateHistory();}
+ public void UpdateHistory(){if(undoButton!=null)undoButton.IsEnabled=CanUndo;if(redoButton!=null)redoButton.IsEnabled=CanRedo;}
+ public bool HandleHistory(KeyEventArgs e){if((Keyboard.Modifiers&ModifierKeys.Control)==0)return false;if(e.Key==Key.Z){e.Handled=true;if((Keyboard.Modifiers&ModifierKeys.Shift)!=0)Redo();else Undo();return true;}if(e.Key==Key.Y){e.Handled=true;Redo();return true;}return false;}
  public int InputChangeCount{get;private set;}
  public string Text{get{return Input.Text;}set{Input.Text=value;}}
  public CodeEditor(){Background=Theme.White;Input=new EditorInput{FontFamily=new FontFamily("Consolas"),FontSize=16,Foreground=Theme.Ink,Background=Theme.White,ShowLineNumbers=true,LineNumbersForeground=Theme.B("#8893B4"),WordWrap=false,HorizontalScrollBarVisibility=ScrollBarVisibility.Auto,VerticalScrollBarVisibility=ScrollBarVisibility.Auto,Padding=new Thickness(5),Margin=new Thickness(5,8,8,8)};
@@ -28,4 +37,5 @@ sealed class CodeEditor : Grid {
   Children.Add(Input);Input.TextChanged+=(s,e)=>{InputChangeCount++;if(CodeChanged!=null)CodeChanged(this,EventArgs.Empty);};}
  public void SetFontSize(double size){if(size<8||size>48)throw new ArgumentOutOfRangeException("size");Input.FontSize=size;RefreshView();}
  public void RefreshView(){Input.UpdateLayout();Input.TextArea.TextView.Redraw();}
+ public void SetDark(){Background=Dark.Panel;Input.Background=Dark.Panel;Input.Foreground=Dark.Ink;Input.LineNumbersForeground=Dark.Muted;Input.TextArea.SelectionBrush=Theme.B("#526487");foreach(var pair in new[]{new[]{"Keyword","#94BAFF"},new[]{"Comment","#70B19F"},new[]{"String","#ECB78B"},new[]{"Number","#95DFE4"},new[]{"Preprocessor","#D5A9F4"}}){var color=Input.SyntaxHighlighting.GetNamedColor(pair[0]);if(color!=null)color.Foreground=new SimpleHighlightingBrush((Color)ColorConverter.ConvertFromString(pair[1]));}RefreshView();}
 }

@@ -1,0 +1,156 @@
+PASS 90 questions ending with project exams
+PASS Large code workspace alongside results
+PASS Right-side results panel is visible
+PASS Answers begin with hint only
+PASS Reveal enables code and import
+PASS One-click answer import requested
+PASS Import replaces editor with exact reference answer
+PASS Original draft is backed up before importing answer
+PASS Imported answer is saved as current draft
+PASS Actual mouse click aligns at font 14 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 14 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 16 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 16 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 18 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 18 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 20 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 20 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 22 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 22 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 24 / scale 1 (245 vs 245)
+PASS Actual multiline drag aligns at 24 / 1
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 14 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 14 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 16 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 16 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 18 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 18 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 20 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 20 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 22 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 22 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 24 / scale 1.5 (245 vs 245)
+PASS Actual multiline drag aligns at 24 / 1.5
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 14 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 14 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 16 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 16 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 18 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 18 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 20 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 20 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 22 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 22 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Actual mouse click aligns at font 24 / scale 2 (245 vs 245)
+PASS Actual multiline drag aligns at 24 / 2
+PASS Insert offset remains exact
+PASS Undo unaffected by highlighting
+PASS Multiline replacement is exact
+PASS Replacement undo is exact
+PASS Scrolled coordinate remains exact
+PASS Coordinate coverage 1122 hits / 18 clicks / 18 drags
+PASS C keyword uses colored syntax section
+PASS Comments have their own syntax color
+PASS Tab caret matches inserted spaces with newline length 1
+PASS Enter indentation exact with newline length 1
+PASS Tab caret matches inserted spaces with newline length 2
+PASS Enter indentation exact with newline length 2
+PASS Highlight redraw leaves draft status, text and caret stable
+PASS GUI compiles embedded answer and grades 100
+PASS Main results show all 28 selectable actual outputs
+PASS Celebration lasts 1000ms
+PASS Celebration finishes naturally
+PASS Incorrect output appears in main panel and score zero
+PASS Compiler diagnostics appear in main results panel
+PASS Requirements and hints do not overlap at 96 DPI
+PASS Usable editor at 2560x1600 / 96 DPI
+PASS Requirements and hints do not overlap at 144 DPI
+PASS Usable editor at 2560x1600 / 144 DPI
+PASS Requirements and hints do not overlap at 192 DPI
+PASS Usable editor at 2560x1600 / 192 DPI
+ALL UI CHECKS PASSED

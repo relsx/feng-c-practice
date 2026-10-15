@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 static partial class Bank {
 public static List<Problem> All() { var a=new List<Problem>();

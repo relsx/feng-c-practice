@@ -1,0 +1,119 @@
+PASS Main window begins its 800 ms opening transition
+PASS Main window finishes fully opaque
+PASS 90 ordinary practice lessons follow question order
+PASS All 90 questions have a specific learning goal
+PASS New syntax is introduced once, with more than 30 topics
+PASS New/review syntax chronology for question 1
+PASS New/review syntax chronology for question 2
+PASS New/review syntax chronology for question 3
+PASS New/review syntax chronology for question 4
+PASS New/review syntax chronology for question 5
+PASS New/review syntax chronology for question 6
+PASS New/review syntax chronology for question 7
+PASS New/review syntax chronology for question 8
+PASS New/review syntax chronology for question 9
+PASS New/review syntax chronology for question 10
+PASS New/review syntax chronology for question 11
+PASS New/review syntax chronology for question 12
+PASS New/review syntax chronology for question 13
+PASS New/review syntax chronology for question 14
+PASS New/review syntax chronology for question 15
+PASS New/review syntax chronology for question 16
+PASS New/review syntax chronology for question 17
+PASS New/review syntax chronology for question 18
+PASS New/review syntax chronology for question 19
+PASS New/review syntax chronology for question 20
+PASS New/review syntax chronology for question 21
+PASS New/review syntax chronology for question 22
+PASS New/review syntax chronology for question 23
+PASS New/review syntax chronology for question 24
+PASS New/review syntax chronology for question 25
+PASS New/review syntax chronology for question 26
+PASS New/review syntax chronology for question 27
+PASS New/review syntax chronology for question 28
+PASS New/review syntax chronology for question 29
+PASS New/review syntax chronology for question 30
+PASS New/review syntax chronology for question 31
+PASS New/review syntax chronology for question 32
+PASS New/review syntax chronology for question 33
+PASS New/review syntax chronology for question 34
+PASS New/review syntax chronology for question 35
+PASS New/review syntax chronology for question 36
+PASS New/review syntax chronology for question 37
+PASS New/review syntax chronology for question 38
+PASS New/review syntax chronology for question 39
+PASS New/review syntax chronology for question 40
+PASS New/review syntax chronology for question 41
+PASS New/review syntax chronology for question 42
+PASS New/review syntax chronology for question 43
+PASS New/review syntax chronology for question 44
+PASS New/review syntax chronology for question 45
+PASS New/review syntax chronology for question 46
+PASS New/review syntax chronology for question 47
+PASS New/review syntax chronology for question 48
+PASS New/review syntax chronology for question 49
+PASS New/review syntax chronology for question 50
+PASS New/review syntax chronology for question 51
+PASS New/review syntax chronology for question 52
+PASS New/review syntax chronology for question 53
+PASS New/review syntax chronology for question 54
+PASS New/review syntax chronology for question 55
+PASS New/review syntax chronology for question 56
+PASS New/review syntax chronology for question 57
+PASS New/review syntax chronology for question 58
+PASS New/review syntax chronology for question 59
+PASS New/review syntax chronology for question 60
+PASS New/review syntax chronology for question 61
+PASS New/review syntax chronology for question 62
+PASS New/review syntax chronology for question 63
+PASS New/review syntax chronology for question 64
+PASS New/review syntax chronology for question 65
+PASS New/review syntax chronology for question 66
+PASS New/review syntax chronology for question 67
+PASS New/review syntax chronology for question 68
+PASS New/review syntax chronology for question 69
+PASS New/review syntax chronology for question 70
+PASS New/review syntax chronology for question 71
+PASS New/review syntax chronology for question 72
+PASS New/review syntax chronology for question 73
+PASS New/review syntax chronology for question 74
+PASS New/review syntax chronology for question 75
+PASS New/review syntax chronology for question 76
+PASS New/review syntax chronology for question 77
+PASS New/review syntax chronology for question 78
+PASS New/review syntax chronology for question 79
+PASS New/review syntax chronology for question 80
+PASS New/review syntax chronology for question 81
+PASS New/review syntax chronology for question 82
+PASS New/review syntax chronology for question 83
+PASS New/review syntax chronology for question 84
+PASS New/review syntax chronology for question 85
+PASS New/review syntax chronology for question 86
+PASS New/review syntax chronology for question 87
+PASS New/review syntax chronology for question 88
+PASS New/review syntax chronology for question 89
+PASS New/review syntax chronology for question 90
+PASS Core IO, pointers, recursion and dynamic allocation have lessons
+PASS Knowledge popup starts a 500 ms transition
+PASS Knowledge popup becomes readable and targets current question
+PASS 500 ms transition for WelcomeWindow
+PASS Dialog completes: WelcomeWindow
+PASS 500 ms transition for AnswerWindow
+PASS Dialog completes: AnswerWindow
+PASS 500 ms transition for ResultsWindow
+PASS Dialog completes: ResultsWindow
+PASS 500 ms transition for AppDialog
+PASS Dialog completes: AppDialog
+PASS Closing during fade does not leave a pending task
+PASS Ordinary compile error gives inline score warning and Chinese diagnostics, no execution animation
+PASS Ordinary score below 60 warns without a modal window
+PASS Warning/knowledge controls keep editor usable at 96 DPI
+PASS Warning/knowledge controls keep editor usable at 144 DPI
+PASS Warning/knowledge controls keep editor usable at 192 DPI
+PASS Ordinary abnormal exit warns without execution animation
+PASS Successful retry clears warning and leaves editing enabled
+PASS 59.9 warns
+PASS 60 is not a low-score warning
+PASS Challenge entrance fades, preserves 3-10 minute limits
+PASS Challenge compile error still opens execution animation and does not unlock
+ALL VER1.1.1 CHECKS PASSED

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -19,7 +19,7 @@ static class Theme {
  public static TextBlock Text(string text,double size=13,Brush color=null,bool bold=false){return new TextBlock{Text=text,FontSize=size,Foreground=color??Ink,FontWeight=bold?FontWeights.SemiBold:FontWeights.Normal,VerticalAlignment=VerticalAlignment.Center,TextWrapping=TextWrapping.Wrap};}
  public static Button Button(string text,bool primary=false){return new Button{Content=text,Style=(Style)Application.Current.FindResource(primary?(object)"PrimaryButton":typeof(Button)),Padding=new Thickness(15,8,15,8),Margin=new Thickness(0,0,8,0),Cursor=System.Windows.Input.Cursors.Hand};}
  public static Border Card(UIElement content,Thickness? padding=null){return new Border{Background=White,BorderBrush=Line,BorderThickness=new Thickness(1),CornerRadius=new CornerRadius(12),Padding=padding??new Thickness(16),Child=content};}
- public static void Window(Window w){w.FontFamily=new FontFamily("Microsoft YaHei UI");w.FontSize=13;w.Foreground=Ink;w.Background=Bg;w.UseLayoutRounding=true;w.SnapsToDevicePixels=true;TextOptions.SetTextFormattingMode(w,TextFormattingMode.Display);TextOptions.SetTextRenderingMode(w,TextRenderingMode.ClearType);}
+ public static void Window(Window w){Transitions.Attach(w,w is MainWindow?Transitions.StartupMilliseconds:Transitions.DialogMilliseconds);w.FontFamily=new FontFamily("Microsoft YaHei UI");w.FontSize=13;w.Foreground=Ink;w.Background=Bg;w.UseLayoutRounding=true;w.SnapsToDevicePixels=true;TextOptions.SetTextFormattingMode(w,TextFormattingMode.Display);TextOptions.SetTextRenderingMode(w,TextRenderingMode.ClearType);}
  public static void Install(){Application.Current.Resources=(ResourceDictionary)XamlReader.Parse(@"
 <ResourceDictionary xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation' xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'>
  <Style TargetType='Button'>
@@ -33,7 +33,7 @@ static class Theme {
  <Style TargetType='DataGridColumnHeader'><Setter Property='Background' Value='#ECF4FF'/><Setter Property='Foreground' Value='#597493'/><Setter Property='Padding' Value='10'/><Setter Property='BorderThickness' Value='0'/></Style>
 </ResourceDictionary>");}
  public static void Capture(FrameworkElement visual,string path,double dpi=96){visual.UpdateLayout();var bitmap=new System.Windows.Media.Imaging.RenderTargetBitmap((int)Math.Ceiling(visual.ActualWidth*dpi/96),(int)Math.Ceiling(visual.ActualHeight*dpi/96),dpi,dpi,PixelFormats.Pbgra32);bitmap.Render(visual);var encoder=new System.Windows.Media.Imaging.PngBitmapEncoder();encoder.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(bitmap));using(var f=File.Create(path))encoder.Save(f);}
- public static string CompileAdvice(string s,bool ok){string a=ok?"编译成功。":"请根据 answer.c:行号 定位错误。";if(s.Contains("undeclared")||s.Contains("undefined symbol"))a+="\n检查变量声明、函数和变量的拼写。";if(s.Contains("';' expected")||s.Contains("expected ';'"))a+="\n可能缺少分号。";return a+"\n\n"+(string.IsNullOrWhiteSpace(s)?"无编译警告。":s);}
+ public static string CompileAdvice(string s,bool ok){return (ok?"编译成功。":"请根据 answer.c:行号 定位错误。")+"\n\n"+Diagnostics.Explain(s);}
  public static string Rules="随机正确性 60 分：20 组随机测试通过比例。\n边界正确性 20 分：8 组边界测试通过比例。\n运行质量 10 分：正确、正常退出、无标准错误且 CPU ≤250ms 的用例比例。\n简洁度 10 分：有效代码行数与有效大小各 5 分。\n\n与本题参考答案比较：行数不超过 1.6 倍（至少 12 行）、大小不超过 1.8 倍（至少 220 B）不扣分；超出后线性扣分，到阈值两倍计零。注释和空白不计大小；行数取有效文本行与语句计数的较大值，避免压成一行规避。简洁度再乘测试通过率。\n\n总分统计为每题历史最高分之和，共 90×100=9000 分。\n\n整数精确比较，浮点绝对误差 ≤0.0001，文本区分大小写；每组 3 秒 / 256 MiB。编译失败计 0 分。\n函数、指针等题目的指定写法用于学习引导，自动评测主要检查输出行为。简洁度是近似指标，不替代人工代码评审。";
 }
 sealed class CaseView {
@@ -59,8 +59,8 @@ sealed class ResultsWindow : Window {
  }
  TextBox ReadBox(string text=""){return new TextBox{Text=text,IsReadOnly=true,AcceptsReturn=true,VerticalContentAlignment=VerticalAlignment.Top,TextWrapping=TextWrapping.NoWrap,VerticalScrollBarVisibility=ScrollBarVisibility.Auto,HorizontalScrollBarVisibility=ScrollBarVisibility.Auto,FontFamily=new FontFamily("Consolas, Microsoft YaHei UI"),FontSize=13,Background=Theme.White,Padding=new Thickness(12),BorderBrush=Theme.Line};}
  void Populate(){if(grid==null)return;var rows=evaluation.Cases.Select((c,i)=>new CaseView{Number=i+1,Kind=c.Test.Edge?"边界":"随机",State=c.Passed?"通过":"失败",Time=c.Run.Millis.ToString("0.0"),Cpu=c.Run.CpuMillis.ToString("0.0"),Case=c}).Where(x=>failures.IsChecked!=true||!x.Case.Passed).ToList();grid.ItemsSource=rows;grid.SelectedItem=rows.FirstOrDefault(x=>!x.Case.Passed)??rows.FirstOrDefault();if(rows.Count==0)detail.Text=failures.IsChecked==true?"当前没有失败用例。":"尚未执行测试。";}
- void ShowCase(){var v=grid.SelectedItem as CaseView;if(v==null)return;var c=v.Case;detail.Text="输入：\n"+c.Test.Input.TrimEnd('\r','\n')+"\n\n预期输出：\n"+c.Test.Expected+"\n\n实际输出：\n"+(c.Run.Output==""?"（无输出）":c.Run.Output.TrimEnd('\r','\n'))+"\n\n诊断：\n"+c.Diagnosis+(c.Passed?"":"\n题目提示："+problem.Hint)+"\n\n墙钟："+v.Time+" ms\nCPU："+v.Cpu+" ms\n退出码："+c.Run.ExitCode+"\n标准错误："+(c.Run.Error==""?"（无）":c.Run.Error);}
- public void ExportReport(){var dialog=new Microsoft.Win32.SaveFileDialog{Filter="评测报告 (*.txt)|*.txt",FileName=problem.Id.ToString("00")+"_评测报告.txt"};if(dialog.ShowDialog(this)==true)try{File.WriteAllText(dialog.FileName,Engine.Report(evaluation),new UTF8Encoding(true));}catch(Exception ex){MessageBox.Show(this,ex.Message,"导出失败");}}
+ void ShowCase(){var v=grid.SelectedItem as CaseView;if(v==null)return;var c=v.Case;detail.Text="输入：\n"+c.Test.Input.TrimEnd('\r','\n')+"\n\n预期输出：\n"+c.Test.Expected+"\n\n实际输出：\n"+(c.Run.Output==""?"（无输出）":c.Run.Output.TrimEnd('\r','\n'))+"\n\n诊断：\n"+c.Diagnosis+(c.Passed?"":"\n题目提示："+problem.Hint)+"\n\n墙钟："+v.Time+" ms\nCPU："+v.Cpu+" ms\n退出码："+c.Run.ExitCode+"\n标准错误："+(c.Run.Error==""?"（无）":Diagnostics.Explain(c.Run.Error));}
+ public void ExportReport(){var dialog=new Microsoft.Win32.SaveFileDialog{Filter="评测报告 (*.txt)|*.txt",FileName=problem.Id.ToString("00")+"_评测报告.txt"};if(dialog.ShowDialog(this)==true)try{File.WriteAllText(dialog.FileName,Engine.Report(evaluation),new UTF8Encoding(true));}catch(Exception ex){AppDialog.Show(this,ex.Message,"导出失败");}}
 }
 sealed class Celebration : Canvas {
  readonly Random random=new Random();TextBlock score;ScaleTransform scale;DispatcherTimer finish;List<Rectangle> ribbons=new List<Rectangle>();public bool IsAnimating{get;private set;}public double DurationMilliseconds{get{return 1000;}}

@@ -1,0 +1,3 @@
+PASS Welcome waits for the main opening fade (858 ms)
+PASS Real startup welcome completes 500 ms fade
+ALL STARTUP CHECKS PASSED

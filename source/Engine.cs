@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
@@ -28,7 +28,7 @@ sealed class Job : IDisposable {
  public void Dispose(){if(handle!=IntPtr.Zero){CloseHandle(handle);handle=IntPtr.Zero;}}
 }
 static class Engine {
- public static string DataRoot=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"CPracticeLab-ver1.0.1");
+ public static string DataRoot=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"CPracticeLab-ver1.1");
  static string compiler;
  public static string CompilerPath {get{EnsureCompiler();return compiler;}}
  public static void EnsureCompiler(){
@@ -89,8 +89,8 @@ static class Engine {
    ev.Compiler=(compile.Error+compile.Output).Replace(source,"answer.c");
    if(compile.Failure!=""||compile.ExitCode!=0||!File.Exists(exe)){ev.Compiler=compile.Failure+"\r\n"+ev.Compiler;return ev;}
    ct.ThrowIfCancellationRequested();ev.Compiled=true;
-   var tests=Bank.Tests(problem.Id,seed);int i=0;
-   foreach(var test in tests){ct.ThrowIfCancellationRequested();var run=Execute(exe,"",test.Input,3000,ct,dir);ct.ThrowIfCancellationRequested();string why="";bool pass=run.Failure==""&&run.ExitCode==0&&Match(test.Expected,run.Output,out why,problem.Id==38||problem.Id==52||problem.Id==56||problem.Id==58);
+   var tests=problem.Id>=101?ChallengeBank.Tests(problem.Id,seed):Bank.Tests(problem.Id,seed);int i=0;
+   foreach(var test in tests){ct.ThrowIfCancellationRequested();var run=Execute(exe,"",test.Input,3000,ct,dir);ct.ThrowIfCancellationRequested();string why="";bool pass=run.Failure==""&&run.ExitCode==0&&Match(test.Expected,run.Output,out why,problem.Id==38||problem.Id==52||problem.Id==56||problem.Id==58||problem.Id==111||problem.Id==128);
     if(run.Failure!="")why=run.Failure+"。请检查死循环、除零、数组越界或非法内存访问。";
     if(!pass&&run.Failure==""&&why=="")why="运行未正常结束。";
     ev.Cases.Add(new CaseResult{Test=test,Run=run,Passed=pass,Diagnosis=why});progress(++i,tests.Count);
@@ -101,12 +101,12 @@ static class Engine {
    return ev;
   }finally{try{Directory.Delete(dir,true);}catch{}}
  }
- public static string Report(Evaluation ev){var sb=new StringBuilder();sb.AppendLine("C 语言练习实验室 · 评测报告").AppendLine("题目："+ev.ProblemId.ToString("00")+" "+ev.Title).AppendLine("时间："+ev.Time).AppendLine("随机种子："+ev.Seed).AppendLine("得分："+ev.Score.ToString("0.0")+" / 100");
+ public static string Report(Evaluation ev){var sb=new StringBuilder();sb.AppendLine(Branding.Title+" · 评测报告").AppendLine("题目："+ev.ProblemId.ToString("00")+" "+ev.Title).AppendLine("时间："+ev.Time).AppendLine("随机种子："+ev.Seed).AppendLine("得分："+ev.Score.ToString("0.0")+" / 100");
   sb.AppendLine("随机正确性："+ev.NormalScore.ToString("0.0")+" / 60；边界正确性："+ev.EdgeScore.ToString("0.0")+" / 20；运行质量："+ev.QualityScore.ToString("0.0")+" / 10");
   sb.AppendLine("简洁度："+(ev.LineScore+ev.SizeScore).ToString("0.0")+" / 10").AppendLine(CodeMetrics.Describe(ev)).AppendLine(Branding.Attribution);
   sb.AppendLine("比较规则：忽略空白差异，整数精确比较，浮点数绝对误差 ≤ 0.0001；文本区分大小写。").AppendLine("运行质量：仅对答案正确、正常退出、无标准错误输出且 CPU 时间 ≤250ms 的用例计分。它是实用度的近似指标。");
-  sb.AppendLine("编译信息：").AppendLine(ev.Compiler==""?"编译成功":ev.Compiler);
-  for(int i=0;i<ev.Cases.Count;i++){var c=ev.Cases[i];sb.AppendLine("\n用例 "+(i+1)+" / "+(c.Test.Edge?"边界":"随机")+" / "+(c.Passed?"通过":"失败")+" / 墙钟 "+c.Run.Millis.ToString("0.0")+"ms / CPU "+c.Run.CpuMillis.ToString("0.0")+"ms").AppendLine("输入：").AppendLine(c.Test.Input).AppendLine("预期：").AppendLine(c.Test.Expected).AppendLine("实际：").AppendLine(c.Run.Output==""?"（无输出）":c.Run.Output).AppendLine("诊断："+c.Diagnosis).AppendLine("标准错误："+c.Run.Error);}
+  sb.AppendLine("编译信息：").AppendLine(Theme.CompileAdvice(ev.Compiler,ev.Compiled));
+  for(int i=0;i<ev.Cases.Count;i++){var c=ev.Cases[i];sb.AppendLine("\n用例 "+(i+1)+" / "+(c.Test.Edge?"边界":"随机")+" / "+(c.Passed?"通过":"失败")+" / 墙钟 "+c.Run.Millis.ToString("0.0")+"ms / CPU "+c.Run.CpuMillis.ToString("0.0")+"ms").AppendLine("输入：").AppendLine(c.Test.Input).AppendLine("预期：").AppendLine(c.Test.Expected).AppendLine("实际：").AppendLine(c.Run.Output==""?"（无输出）":c.Run.Output).AppendLine("诊断："+c.Diagnosis).AppendLine("标准错误 / 中文解释："+Diagnostics.Explain(c.Run.Error));}
   sb.AppendLine("\n提交代码：").AppendLine(ev.Code);return sb.ToString();
  }
 }
