@@ -1,0 +1,5 @@
+PASS Actual official Release API and HTTPS asset download
+PASS SHA-256 + byte size + embedded EXE version verified
+PASS Older version cannot enter installation
+https://github.com/relsx/feng-c-practice/releases/tag/ver1.1.1
+SHA256 4b0afbbb82138793fd1df350c7979bd831b200a25cd2e3407b8e5f906cb57b03

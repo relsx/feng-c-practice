@@ -1,0 +1,6 @@
+PASS Updated EXE starts after replacement
+PASS Target matches verified new binary
+PASS Original binary preserved as .previous
+PASS Same-directory pending file consumed by atomic replacement
+PASS Helper records successful version
+ALL UPDATER INTEGRATION CHECKS PASSED

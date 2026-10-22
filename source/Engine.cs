@@ -90,7 +90,7 @@ static class Engine {
    if(compile.Failure!=""||compile.ExitCode!=0||!File.Exists(exe)){ev.Compiler=compile.Failure+"\r\n"+ev.Compiler;return ev;}
    ct.ThrowIfCancellationRequested();ev.Compiled=true;
    var tests=problem.Id>=101?ChallengeBank.Tests(problem.Id,seed):Bank.Tests(problem.Id,seed);int i=0;
-   foreach(var test in tests){ct.ThrowIfCancellationRequested();var run=Execute(exe,"",test.Input,3000,ct,dir);ct.ThrowIfCancellationRequested();string why="";bool pass=run.Failure==""&&run.ExitCode==0&&Match(test.Expected,run.Output,out why,problem.Id==38||problem.Id==52||problem.Id==56||problem.Id==58||problem.Id==111||problem.Id==128);
+   foreach(var test in tests){ct.ThrowIfCancellationRequested();var run=Execute(exe,"",test.Input,3000,ct,dir);ct.ThrowIfCancellationRequested();string why="";bool pass=run.Failure==""&&run.ExitCode==0&&Match(test.Expected,run.Output,out why,problem.Id==38||problem.Id==52||problem.Id==56||problem.Id==58||problem.Id==122||problem.Id==123||problem.Id==124);
     if(run.Failure!="")why=run.Failure+"。请检查死循环、除零、数组越界或非法内存访问。";
     if(!pass&&run.Failure==""&&why=="")why="运行未正常结束。";
     ev.Cases.Add(new CaseResult{Test=test,Run=run,Passed=pass,Diagnosis=why});progress(++i,tests.Count);

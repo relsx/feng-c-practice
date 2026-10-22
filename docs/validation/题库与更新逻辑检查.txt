@@ -1,0 +1,141 @@
+PASS 50 contiguous levels
+PASS 8-30 minute nondecreasing limits
+PASS Every level contains detailed learning, steps and edge-case advice
+PASS Entry matches basic loop practice; specialized hard topics removed
+PASS Font preference 14
+PASS Font preference 16
+PASS Font preference 18
+PASS Font preference 20
+PASS Font preference 22
+PASS Font preference 24
+PASS Auto-check preference saved
+PASS Auto-check can be re-enabled
+PASS Numeric version comparison 1.2.10 > 1.2.1
+PASS Reject malformed/preview tag ver1.2.2-beta
+PASS Reject malformed/preview tag 1.2.x
+PASS Reject malformed/preview tag 1.2.1/evil
+PASS Reject malformed/preview tag 9999999999999.2.1
+PASS New release selects official EXE and digest
+PASS Older GitHub release never downgrades local version
+PASS Foreign binary URL rejected
+PASS Pre-release ignored
+PASS Unsafe transport rejected: http://github.com/app.exe
+PASS Unsafe transport rejected: https://github.com.evil.example/app.exe
+PASS Unsafe transport rejected: https://user@github.com/app.exe
+PASS Unsafe transport rejected: file:///C:/test.exe
+PASS Checksum exact asset name parsed
+PASS Checksum cannot match another asset
+PASS Local EXE hash, PE header and version verification
+PASS Tampered hash rejected before install
+PASS Mismatched executable version rejected
+PASS Truncated download rejected
+PASS Oversized download rejected
+PASS New curriculum has separate progress; old challenge scores not reused
+PASS New attempt uses 8 minutes
+PASS Reference level 1 seed 20261022 (28 cases)
+PASS Reference level 1 seed 12150 (28 cases)
+PASS Reference level 2 seed 20261022 (28 cases)
+PASS Reference level 2 seed 12150 (28 cases)
+PASS Reference level 3 seed 20261022 (28 cases)
+PASS Reference level 3 seed 12150 (28 cases)
+PASS Reference level 4 seed 20261022 (28 cases)
+PASS Reference level 4 seed 12150 (28 cases)
+PASS Reference level 5 seed 20261022 (28 cases)
+PASS Reference level 5 seed 12150 (28 cases)
+PASS Reference level 6 seed 20261022 (28 cases)
+PASS Reference level 6 seed 12150 (28 cases)
+PASS Reference level 7 seed 20261022 (28 cases)
+PASS Reference level 7 seed 12150 (28 cases)
+PASS Reference level 8 seed 20261022 (28 cases)
+PASS Reference level 8 seed 12150 (28 cases)
+PASS Reference level 9 seed 20261022 (28 cases)
+PASS Reference level 9 seed 12150 (28 cases)
+PASS Reference level 10 seed 20261022 (28 cases)
+PASS Reference level 10 seed 12150 (28 cases)
+PASS Reference level 11 seed 20261022 (28 cases)
+PASS Reference level 11 seed 12150 (28 cases)
+PASS Reference level 12 seed 20261022 (28 cases)
+PASS Reference level 12 seed 12150 (28 cases)
+PASS Reference level 13 seed 20261022 (28 cases)
+PASS Reference level 13 seed 12150 (28 cases)
+PASS Reference level 14 seed 20261022 (28 cases)
+PASS Reference level 14 seed 12150 (28 cases)
+PASS Reference level 15 seed 20261022 (28 cases)
+PASS Reference level 15 seed 12150 (28 cases)
+PASS Reference level 16 seed 20261022 (28 cases)
+PASS Reference level 16 seed 12150 (28 cases)
+PASS Reference level 17 seed 20261022 (28 cases)
+PASS Reference level 17 seed 12150 (28 cases)
+PASS Reference level 18 seed 20261022 (28 cases)
+PASS Reference level 18 seed 12150 (28 cases)
+PASS Reference level 19 seed 20261022 (28 cases)
+PASS Reference level 19 seed 12150 (28 cases)
+PASS Reference level 20 seed 20261022 (28 cases)
+PASS Reference level 20 seed 12150 (28 cases)
+PASS Reference level 21 seed 20261022 (28 cases)
+PASS Reference level 21 seed 12150 (28 cases)
+PASS Reference level 22 seed 20261022 (28 cases)
+PASS Reference level 22 seed 12150 (28 cases)
+PASS Reference level 23 seed 20261022 (28 cases)
+PASS Reference level 23 seed 12150 (28 cases)
+PASS Reference level 24 seed 20261022 (28 cases)
+PASS Reference level 24 seed 12150 (28 cases)
+PASS Reference level 25 seed 20261022 (28 cases)
+PASS Reference level 25 seed 12150 (28 cases)
+PASS Reference level 26 seed 20261022 (28 cases)
+PASS Reference level 26 seed 12150 (28 cases)
+PASS Reference level 27 seed 20261022 (28 cases)
+PASS Reference level 27 seed 12150 (28 cases)
+PASS Reference level 28 seed 20261022 (28 cases)
+PASS Reference level 28 seed 12150 (28 cases)
+PASS Reference level 29 seed 20261022 (28 cases)
+PASS Reference level 29 seed 12150 (28 cases)
+PASS Reference level 30 seed 20261022 (28 cases)
+PASS Reference level 30 seed 12150 (28 cases)
+PASS Reference level 31 seed 20261022 (28 cases)
+PASS Reference level 31 seed 12150 (28 cases)
+PASS Reference level 32 seed 20261022 (28 cases)
+PASS Reference level 32 seed 12150 (28 cases)
+PASS Reference level 33 seed 20261022 (28 cases)
+PASS Reference level 33 seed 12150 (28 cases)
+PASS Reference level 34 seed 20261022 (28 cases)
+PASS Reference level 34 seed 12150 (28 cases)
+PASS Reference level 35 seed 20261022 (28 cases)
+PASS Reference level 35 seed 12150 (28 cases)
+PASS Reference level 36 seed 20261022 (28 cases)
+PASS Reference level 36 seed 12150 (28 cases)
+PASS Reference level 37 seed 20261022 (28 cases)
+PASS Reference level 37 seed 12150 (28 cases)
+PASS Reference level 38 seed 20261022 (28 cases)
+PASS Reference level 38 seed 12150 (28 cases)
+PASS Reference level 39 seed 20261022 (28 cases)
+PASS Reference level 39 seed 12150 (28 cases)
+PASS Reference level 40 seed 20261022 (28 cases)
+PASS Reference level 40 seed 12150 (28 cases)
+PASS Reference level 41 seed 20261022 (28 cases)
+PASS Reference level 41 seed 12150 (28 cases)
+PASS Reference level 42 seed 20261022 (28 cases)
+PASS Reference level 42 seed 12150 (28 cases)
+PASS Reference level 43 seed 20261022 (28 cases)
+PASS Reference level 43 seed 12150 (28 cases)
+PASS Reference level 44 seed 20261022 (28 cases)
+PASS Reference level 44 seed 12150 (28 cases)
+PASS Reference level 45 seed 20261022 (28 cases)
+PASS Reference level 45 seed 12150 (28 cases)
+PASS Reference level 46 seed 20261022 (28 cases)
+PASS Reference level 46 seed 12150 (28 cases)
+PASS Reference level 47 seed 20261022 (28 cases)
+PASS Reference level 47 seed 12150 (28 cases)
+PASS Reference level 48 seed 20261022 (28 cases)
+PASS Reference level 48 seed 12150 (28 cases)
+PASS Reference level 49 seed 20261022 (28 cases)
+PASS Reference level 49 seed 12150 (28 cases)
+PASS Reference level 50 seed 20261022 (28 cases)
+PASS Reference level 50 seed 12150 (28 cases)
+PASS Wrong submission cannot unlock challenge
+PASS Text leading zeroes preserved
+PASS Ordinary practice regression 1
+PASS Ordinary practice regression 38
+PASS Ordinary practice regression 58
+PASS Ordinary practice regression 88
+ALL VER1.2.1 CORE CHECKS PASSED · 2800 challenge cases + 112 ordinary cases

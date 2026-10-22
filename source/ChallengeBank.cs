@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 sealed class ChallengeLevel {
  public int Number; public Problem Problem; public string Learning;
- public int Seconds{get{return 180+(Number-1)*420/49;}}
+ public int Seconds{get{return (8+(Number-1)*22/49)*60;}}
 }
-static class ChallengeBank {
+static class LegacyChallengeBank {
  static string C(string body,string global=""){return "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <limits.h>\n\n"+global+"\nint main(void)\n{\n"+body+"\n    return 0;\n}\n";}
  static ChallengeLevel L(int n,string title,string statement,string lesson,string body,string global=""){
   return new ChallengeLevel{Number=n,Problem=new Problem(100+n,title,"暗域 · 第 "+((n-1)/10+1)+" 章",statement,"闯关答案仅在通关后开放。",C(body,global)),Learning=lesson+Extension(n)+"\n\n阅读知识讲解后，请独立设计算法并从空白文件编写。只输出题目规定内容。"};
  }
  static string Extension(int n){switch(n){case 1:return "\n新增要求：普通前缀与绝对下标加权前缀表示不同信息。查询的局部权重从1开始，需要将绝对下标转换为相对下标。";case 4:return "\n新增要求：扫描时记录栈深度最大值；错误定位以输入位置为准，区分错误右括号和扫描结束尚未闭合。";case 10:return "\n新增要求：大整数比较先比长度、等长再按字典序；减法从低位逐位借位，必须先选择较大的被减数。相等时差为0。";case 13:return "\n新增要求：完整匹配结束位置与起点有长度偏移，输出为1基下标；无匹配仍须输出第二行0。";case 18:return "\n新增要求：三重乘积要核对两个内部维度。可选任意结合顺序，但两次中间矩阵尺寸不同；乘法不满足交换律。";case 24:return "\n新增要求：访问状态是(行,列,是否持钥匙)。同一位置没钥匙和有钥匙是不同状态，可以分别入队；否则可能错误地剪掉合法路线。";case 32:return "\n新增要求：有限库存不能用无限硬币转移。每类最多取规定数量，或拆成对应数量的0/1物品；零库存不得产生可达状态。";case 33:return "\n新增要求：最优长度相同时累计前驱计数，严格更优时替换计数；相等值不能互相延伸。数量按下标序列计数并及时取模。";default:return "";}}
  public static readonly List<ChallengeLevel> Levels=TeachNewSyntax(Build());
- static List<ChallengeLevel> TeachNewSyntax(List<ChallengeLevel> levels){
+ public static List<ChallengeLevel> TeachNewSyntax(List<ChallengeLevel> levels){
   string[][] notes={
    new[]{@"#include", "预处理：#include <stdio.h> 提供输入输出声明，stdlib.h 提供分配和排序，string.h 提供字符串操作，limits.h 提供整型边界。仅在需要对应功能时包含头文件。"},
    new[]{@"\bint\b", "类型与初始化：int 为整数，long long 容量更大；局部变量先初始化再读取。声明后的 = 设置初值。{0} 将数组全部初始化为0。"},

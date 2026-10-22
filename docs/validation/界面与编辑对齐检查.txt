@@ -1,0 +1,31 @@
+PASS Top star map selects first unlocked node
+PASS Countdown locks selection without disabling the dark map
+PASS Countdown begins at eight minutes
+PASS Locked next level cannot be selected
+PASS Editor history stays available during challenge
+PASS Settings popup completes smooth 500ms fade
+PASS Settings font applies to both editors without scaling
+PASS Ending attempt restores selection and keeps dark appearance
+PASS Editor hit geometry both modes 96dpi / font 14
+PASS Editor hit geometry both modes 96dpi / font 16
+PASS Editor hit geometry both modes 96dpi / font 18
+PASS Editor hit geometry both modes 96dpi / font 20
+PASS Editor hit geometry both modes 96dpi / font 22
+PASS Editor hit geometry both modes 96dpi / font 24
+PASS Dark workspace remains usable at 96dpi
+PASS Editor hit geometry both modes 144dpi / font 14
+PASS Editor hit geometry both modes 144dpi / font 16
+PASS Editor hit geometry both modes 144dpi / font 18
+PASS Editor hit geometry both modes 144dpi / font 20
+PASS Editor hit geometry both modes 144dpi / font 22
+PASS Editor hit geometry both modes 144dpi / font 24
+PASS Dark workspace remains usable at 144dpi
+PASS Editor hit geometry both modes 192dpi / font 14
+PASS Editor hit geometry both modes 192dpi / font 16
+PASS Editor hit geometry both modes 192dpi / font 18
+PASS Editor hit geometry both modes 192dpi / font 20
+PASS Editor hit geometry both modes 192dpi / font 22
+PASS Editor hit geometry both modes 192dpi / font 24
+PASS Dark workspace remains usable at 192dpi
+PASS 50th star scrolls into view and can be reached
+ALL VER1.2.1 UI CHECKS PASSED · 2988 character hit positions
