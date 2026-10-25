@@ -8,10 +8,10 @@ using System.Windows.Media.Animation;
 
 static class Transitions {
  public const int StartupMilliseconds=800,DialogMilliseconds=500;
- sealed class State {public int Milliseconds;public bool Started,Complete;public FrameworkElement Root;public readonly TaskCompletionSource<bool> Ready=new TaskCompletionSource<bool>();}
+ sealed class State {public int Milliseconds;public bool Started,Complete,Closing,AllowClose;public FrameworkElement Root;public readonly TaskCompletionSource<bool> Ready=new TaskCompletionSource<bool>();}
  static readonly ConditionalWeakTable<Window,State> states=new ConditionalWeakTable<Window,State>();
  public static void Attach(Window window,int milliseconds){State existing;if(states.TryGetValue(window,out existing))return;var state=new State{Milliseconds=milliseconds};states.Add(window,state);
-  window.SourceInitialized+=(s,e)=>Prepare(window,state);
+  window.SourceInitialized+=(s,e)=>{Prepare(window,state);window.Closing+=(sender,args)=>{if(args.Cancel||state.AllowClose)return;args.Cancel=true;if(state.Closing)return;state.Closing=true;if(state.Root==null){state.AllowClose=true;window.Dispatcher.BeginInvoke((Action)(()=>window.Close()));return;}state.Root.IsHitTestVisible=false;var fade=new DoubleAnimation(state.Root.Opacity,0,TimeSpan.FromMilliseconds(180)){EasingFunction=new CubicEase{EasingMode=EasingMode.EaseInOut}};fade.Completed+=(a,b)=>{state.AllowClose=true;window.Close();if(window.IsVisible){state.AllowClose=state.Closing=false;state.Root.IsHitTestVisible=true;state.Root.BeginAnimation(UIElement.OpacityProperty,null);state.Root.Opacity=1;}};state.Root.BeginAnimation(UIElement.OpacityProperty,fade);};};
   window.ContentRendered+=(s,e)=>Start(window,state);
   window.Closed+=(s,e)=>{state.Complete=true;if(state.Root!=null){state.Root.BeginAnimation(UIElement.OpacityProperty,null);state.Root.Opacity=1;}state.Ready.TrySetResult(false);};
  }

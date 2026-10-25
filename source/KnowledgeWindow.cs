@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -79,7 +79,7 @@ sealed class KnowledgeWindow : Window {
  public KnowledgeWindow(Problem p){Lesson=PracticeKnowledge.For(p.Id);Title="知识点学习 · "+p.Id.ToString("00")+" "+p.Title;Width=900;Height=730;MinWidth=640;MinHeight=480;WindowStartupLocation=WindowStartupLocation.CenterOwner;ShowInTaskbar=false;Theme.Window(this);
   var root=new Grid();root.RowDefinitions.Add(new RowDefinition{Height=GridLength.Auto});root.RowDefinitions.Add(new RowDefinition{Height=new GridLength(1,GridUnitType.Star)});root.RowDefinitions.Add(new RowDefinition{Height=GridLength.Auto});Content=new Border{Background=Theme.Bg,Padding=new Thickness(22),Child=root};
   var header=new StackPanel{Margin=new Thickness(0,0,0,14)};header.Children.Add(Theme.Text(p.Id.ToString("00")+" · "+p.Title,21,Theme.Blue,true));var intro=Theme.Text("按题号递进学习 · 首次出现按题号判定，可随时回顾相关基础",11,Theme.Muted);intro.Margin=new Thickness(0,6,0,0);header.Children.Add(intro);root.Children.Add(header);
-  var tabs=new TabControl{Background=Theme.White,BorderBrush=Theme.Line};Grid.SetRow(tabs,1);root.Children.Add(tabs);
+  var tabs=new TabControl{Background=Theme.White,BorderBrush=Theme.Line};Grid.SetRow(tabs,1);root.Children.Add(tabs);GlassMotion.WatchTabs(tabs);
   var study=new StackPanel{Margin=new Thickness(18)};study.Children.Add(Theme.Text("本题学习目标",15,Theme.Blue,true));var goal=Theme.Text(Lesson.Goal,14);goal.Margin=new Thickness(0,10,0,20);study.Children.Add(goal);study.Children.Add(Theme.Text("本题首次出现的语法 / 用法",15,Theme.Blue,true));
   if(Lesson.New.Count==0){var text=Theme.Text("本题没有新增语法，重点是组合运用已有知识。右侧“相关基础回顾”可补看涉及的语法。",13,Theme.Muted);text.Margin=new Thickness(0,12,0,0);study.Children.Add(text);}foreach(var topic in Lesson.New)AddTopic(study,topic,false);tabs.Items.Add(new TabItem{Header="本题学习",Content=Scroll(study)});
   var review=new StackPanel{Margin=new Thickness(18)};review.Children.Add(Theme.Text("本题涉及的已有知识",15,Theme.Blue,true));foreach(var topic in Lesson.Review)AddTopic(review,topic,true);if(Lesson.Review.Count==0)review.Children.Add(Theme.Text("这是学习起点；请先阅读“本题学习”中的入门讲解。",13,Theme.Muted));tabs.Items.Add(new TabItem{Header="相关基础回顾",Content=Scroll(review)});

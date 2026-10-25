@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -20,7 +20,7 @@ sealed class EditorInput : TextEditor {
 sealed class CodeEditor : Grid {
  public EditorInput Input{get;private set;}
  public event EventHandler CodeChanged;
- Button undoButton,redoButton;
+ Button undoButton,redoButton;bool forcedDark,appearanceDark;
  public bool CanUndo{get{return !Input.IsReadOnly&&Input.Document.UndoStack.CanUndo;}}
  public bool CanRedo{get{return !Input.IsReadOnly&&Input.Document.UndoStack.CanRedo;}}
  public void Undo(){if(CanUndo)Input.Undo();UpdateHistory();Input.Focus();}
@@ -34,8 +34,10 @@ sealed class CodeEditor : Grid {
   Input.Options.ConvertTabsToSpaces=true;Input.Options.IndentationSize=4;Input.Options.EnableHyperlinks=false;Input.Options.EnableEmailHyperlinks=false;
   string xshd=@"<SyntaxDefinition name='C' xmlns='http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008'><Color name='Keyword' foreground='#7045BE'/><Color name='Comment' foreground='#43877C'/><Color name='String' foreground='#AB5A32'/><Color name='Number' foreground='#246BBB'/><Color name='Preprocessor' foreground='#9560AD'/><RuleSet><Span color='Comment' begin='//'/><Span color='Comment' multiline='true' begin='/\*' end='\*/'/><Span color='String' begin='&quot;' end='&quot;'><RuleSet><Rule>\\.</Rule></RuleSet></Span><Span color='String' begin='&apos;' end='&apos;'><RuleSet><Rule>\\.</Rule></RuleSet></Span><Rule color='Preprocessor'>^\s*\#.*</Rule><Keywords color='Keyword'><Word>auto</Word><Word>break</Word><Word>case</Word><Word>char</Word><Word>const</Word><Word>continue</Word><Word>default</Word><Word>do</Word><Word>double</Word><Word>else</Word><Word>enum</Word><Word>extern</Word><Word>float</Word><Word>for</Word><Word>goto</Word><Word>if</Word><Word>inline</Word><Word>int</Word><Word>long</Word><Word>register</Word><Word>restrict</Word><Word>return</Word><Word>short</Word><Word>signed</Word><Word>sizeof</Word><Word>static</Word><Word>struct</Word><Word>switch</Word><Word>typedef</Word><Word>union</Word><Word>unsigned</Word><Word>void</Word><Word>volatile</Word><Word>while</Word><Word>_Bool</Word><Word>_Complex</Word><Word>_Imaginary</Word></Keywords><Rule color='Number'>\b(0[xX][0-9a-fA-F]+|\d+(\.\d+)?([eE][+-]?\d+)?)[uUlLfF]*\b</Rule></RuleSet></SyntaxDefinition>";
   using(var reader=XmlReader.Create(new StringReader(xshd)))Input.SyntaxHighlighting=ICSharpCode.AvalonEdit.Highlighting.Xshd.HighlightingLoader.Load(reader,HighlightingManager.Instance);
-  Children.Add(Input);Input.TextChanged+=(s,e)=>{InputChangeCount++;if(CodeChanged!=null)CodeChanged(this,EventArgs.Empty);};}
+  Loaded+=(s,e)=>{SetAppearance(forcedDark||AppSettings.Night);AppSettings.Changed+=OnAppearance;};Unloaded+=(s,e)=>AppSettings.Changed-=OnAppearance;Children.Add(Input);Input.TextChanged+=(s,e)=>{InputChangeCount++;if(CodeChanged!=null)CodeChanged(this,EventArgs.Empty);};}
  public void SetFontSize(double size){if(size<8||size>48)throw new ArgumentOutOfRangeException("size");Input.FontSize=size;RefreshView();}
  public void RefreshView(){Input.UpdateLayout();Input.TextArea.TextView.Redraw();}
- public void SetDark(){Background=Dark.Panel;Input.Background=Dark.Panel;Input.Foreground=Dark.Ink;Input.LineNumbersForeground=Dark.Muted;Input.TextArea.SelectionBrush=Theme.B("#526487");foreach(var pair in new[]{new[]{"Keyword","#94BAFF"},new[]{"Comment","#70B19F"},new[]{"String","#ECB78B"},new[]{"Number","#95DFE4"},new[]{"Preprocessor","#D5A9F4"}}){var color=Input.SyntaxHighlighting.GetNamedColor(pair[0]);if(color!=null)color.Foreground=new SimpleHighlightingBrush((Color)ColorConverter.ConvertFromString(pair[1]));}RefreshView();}
+ public void SetDark(){forcedDark=true;SetAppearance(true);}
+ void OnAppearance(){SetAppearance(forcedDark||AppSettings.Night);}
+ public void SetAppearance(bool dark){dark=forcedDark||dark;appearanceDark=dark;Background=forcedDark?Dark.Panel:Theme.White;Input.Background=Brushes.Transparent;Input.Foreground=forcedDark?Dark.Ink:Theme.Ink;Input.LineNumbersForeground=forcedDark?Dark.Muted:Theme.Muted;Input.TextArea.SelectionBrush=Theme.B(dark?"#665B98D9":"#806DAFF2");string[] names={"Keyword","Comment","String","Number","Preprocessor"};string[] colors=dark?new[]{"#A9C9FF","#83C7B4","#F4C49B","#98E6EE","#D9B7FB"}:new[]{"#7045BE","#357C70","#A34E26","#246BBB","#905AA8"};for(int i=0;i<names.Length;i++){var color=Input.SyntaxHighlighting.GetNamedColor(names[i]);if(color!=null)color.Foreground=new SimpleHighlightingBrush((Color)ColorConverter.ConvertFromString(colors[i]));}RefreshView();}
 }

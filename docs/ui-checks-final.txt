@@ -1,0 +1,39 @@
+PASS Integrated borderless chrome with native resize support
+PASS Main native corner region matches the glass frame and clipping geometry
+PASS Main settings icon and window controls share one centre line
+PASS Settings native corner region matches the glass frame and clipping geometry
+PASS Settings card backgrounds and inner clipping stay aligned
+PASS Settings opening fade is 500ms
+PASS Theme toggle retains editor document, text, caret and undo
+PASS Dark mode uses readable light text
+PASS Theme preference saved alongside compatible font settings
+PASS Closing animation delays final close
+PASS Settings closes after fade
+PASS Challenge countdown retains dark enabled constellation
+PASS Challenge stays dark while ordinary mode switches to light
+PASS All compact icon commands retain tooltip, accessibility name and hit area
+PASS Icon command available: 设置
+PASS Icon command available: 知识点学习
+PASS Icon command available: 提示 / 标准答案
+PASS Icon command available: 撤回
+PASS Icon command available: 取消撤回
+PASS Icon command available: 导入
+PASS Icon command available: 保存
+PASS Icon command available: 重置
+PASS Icon command available: 查看结果与报告
+PASS Reference remains hidden until hints are read
+PASS Reference reveal command and animation work
+PASS Answer import intent survives animated close
+PASS Knowledge page tab transition keeps navigation working
+PASS Confirmation result survives animated close
+PASS Real modal dialog returns correct result after animated close
+PASS Existing close cancellation keeps the window usable
+PASS Close completes normally once guard is released
+PASS Both editor layouts stay usable at 96dpi / dark=False
+PASS Both editor layouts stay usable at 144dpi / dark=False
+PASS Both editor layouts stay usable at 192dpi / dark=False
+PASS Both editor layouts stay usable at 96dpi / dark=True
+PASS Both editor layouts stay usable at 144dpi / dark=True
+PASS Both editor layouts stay usable at 192dpi / dark=True
+PASS Cursor positions match at 6 fonts × 3 DPI scales × 2 themes × 2 modes: 5976
+ALL GLASS UI CHECKS PASSED

@@ -1,19 +1,17 @@
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 static class Branding {
- public const string Title="Feng's C语言练习器 ver1.2.1";
+ public const string Title="Feng's C语言练习器 ver1.2.1.1";
  public const string Attribution="By Feng; 仅供学习使用；Email：feng111@bupt.edu.cn";
  public static UIElement Header(Action openSettings=null){
-  var grid=new Grid{Margin=new Thickness(25,5,25,5)};grid.ColumnDefinitions.Add(new ColumnDefinition{Width=new GridLength(1,GridUnitType.Star)});grid.ColumnDefinitions.Add(new ColumnDefinition{Width=GridLength.Auto});
-  var left=new StackPanel();var title=new TextBlock{Margin=new Thickness(0,0,0,2)};title.Inlines.Add(new Run("Feng's "){FontFamily=new FontFamily("Georgia"),FontStyle=FontStyles.Italic,FontSize=20,Foreground=Theme.B("#E9F2FF")});title.Inlines.Add(new Run("C语言练习器"){FontSize=16,FontWeight=FontWeights.SemiBold,Foreground=Theme.B("#FFFFFF")});title.Inlines.Add(new Run(" ver1.2.1"){FontSize=11,FontFamily=new FontFamily("Consolas"),Foreground=Theme.B("#B7CBE7")});left.Children.Add(title);
-  left.Children.Add(Theme.Text("By Feng;",11,Theme.B("#E9F2FF"),true));left.Children.Add(Theme.Text("仅供学习使用；Email：feng111@bupt.edu.cn",10.5,Theme.B("#C8D9ED")));grid.Children.Add(left);
-  var actions=new StackPanel{Orientation=Orientation.Horizontal,VerticalAlignment=VerticalAlignment.Center};var badge=new Border{Background=Theme.B("#12FFFFFF"),CornerRadius=new CornerRadius(12),Padding=new Thickness(13,8,13,8),Margin=new Thickness(0,0,14,0),Child=Theme.Text("C  /  LEARN BY DOING",10,Theme.B("#BED9F4"),true)};actions.Children.Add(badge);var settings=Dark.Button("设置 / SETTINGS");settings.Margin=new Thickness(0);settings.Click+=(s,e)=>{if(openSettings!=null)openSettings();};actions.Children.Add(settings);Grid.SetColumn(actions,1);grid.Children.Add(actions);Action changed=()=>{if(!grid.Dispatcher.HasShutdownStarted)grid.Dispatcher.BeginInvoke((Action)(()=>{settings.Content=UpdateService.Latest!=null&&UpdateService.Latest.Newer?"设置 · 有新版本":"设置 / SETTINGS";settings.ToolTip=UpdateService.Status;}));};UpdateService.Changed+=changed;grid.Unloaded+=(s,e)=>UpdateService.Changed-=changed;
-  var glass=new Grid{ClipToBounds=true,Background=new LinearGradientBrush(new GradientStopCollection{new GradientStop(Color.FromRgb(15,36,67),0),new GradientStop(Color.FromRgb(23,56,96),.45),new GradientStop(Color.FromRgb(29,70,113),1)},new Point(0,0),new Point(1,1))};
-  var glow=new System.Windows.Shapes.Ellipse{Width=680,Height=170,HorizontalAlignment=HorizontalAlignment.Center,VerticalAlignment=VerticalAlignment.Center,Margin=new Thickness(80,-50,0,0),Fill=new RadialGradientBrush(Color.FromArgb(24,115,172,238),Color.FromArgb(0,115,172,238)),IsHitTestVisible=false};glass.Children.Add(glow);glass.Children.Add(grid);
-  return new Border{Background=Theme.Bg,BorderBrush=Theme.B("#284D76"),BorderThickness=new Thickness(0,0,0,1),Child=glass};
+  var grid=new Grid{Margin=new Thickness(28,16,162,10)};grid.ColumnDefinitions.Add(new ColumnDefinition{Width=new GridLength(1,GridUnitType.Star)});grid.ColumnDefinitions.Add(new ColumnDefinition{Width=GridLength.Auto});
+  var left=new StackPanel();var title=new TextBlock{Margin=new Thickness(0,0,0,3)};title.Inlines.Add(new Run("Feng's "){FontFamily=new FontFamily("Georgia"),FontStyle=FontStyles.Italic,FontSize=24,Foreground=Theme.Blue});title.Inlines.Add(new Run("C语言练习器"){FontSize=18,FontWeight=FontWeights.SemiBold,Foreground=Theme.Ink});title.Inlines.Add(new Run("  ver1.2.1.1"){FontSize=11,FontFamily=new FontFamily("Consolas"),Foreground=Theme.Muted});left.Children.Add(title);
+  left.Children.Add(Theme.Text("By Feng  ·  仅供学习使用",11,Theme.Muted));left.Children.Add(Theme.Text("Email：feng111@bupt.edu.cn",10,Theme.Muted));grid.Children.Add(left);
+  var actions=new StackPanel{Orientation=Orientation.Horizontal,VerticalAlignment=VerticalAlignment.Center};var badge=new Border{Background=Theme.White,BorderBrush=Theme.Line,BorderThickness=new Thickness(1),CornerRadius=new CornerRadius(18),Padding=new Thickness(14,9,14,9),Margin=new Thickness(0,0,12,0),Child=Theme.Text("C  /  LEARN BY DOING",10,Theme.Blue,true)};actions.Children.Add(badge);var settings=Theme.Button("设置");settings.Margin=new Thickness(0);settings.Click+=(s,e)=>{if(openSettings!=null)openSettings();};actions.Children.Add(settings);Grid.SetColumn(actions,1);grid.Children.Add(actions);Action changed=()=>{if(!grid.Dispatcher.HasShutdownStarted)grid.Dispatcher.BeginInvoke((Action)(()=>{settings.ToolTip=UpdateService.Latest!=null&&UpdateService.Latest.Newer?"设置 · 有新版本":"设置 · 外观、字号与软件更新";}));};UpdateService.Changed+=changed;grid.Unloaded+=(s,e)=>UpdateService.Changed-=changed;
+  return grid;
  }
 }
 sealed class WelcomeWindow : Window {

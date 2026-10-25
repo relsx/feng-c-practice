@@ -1,0 +1,13 @@
+PASS Old version settings migrate with light theme default
+PASS Theme, font and automatic update preference reload from disk
+PASS Four component version correctly compares to previous release
+PASS Four component Release asset filenames retain revision number
+PASS Published ver1.2.1 cannot downgrade this build
+PASS Ordinary reference compilation and 28 cases: 1
+PASS Ordinary reference compilation and 28 cases: 40
+PASS Ordinary reference compilation and 28 cases: 90
+PASS Challenge reference compilation, passing score and 28 cases: 1
+PASS Challenge reference compilation, passing score and 28 cases: 25
+PASS Challenge reference compilation, passing score and 28 cases: 50
+PASS Core regression cases passed: 168
+ALL GLASS CORE CHECKS PASSED
