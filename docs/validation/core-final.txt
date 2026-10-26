@@ -1,0 +1,14 @@
+PASS Old settings retain code font, theme and update choice; UI size defaults to 13
+PASS UI font independently selected: 12
+PASS UI font independently selected: 13
+PASS UI font independently selected: 14
+PASS UI font independently selected: 15
+PASS UI font independently selected: 16
+PASS Both font preferences reload independently
+PASS Embedded version is ver1.2.1.2
+PASS EXE size, checksum and four-part file version verification
+PASS Writable application directory updates without administrator privileges
+PASS Writeability check leaves no temporary files
+PASS Future official four-part Release is available for in-app update
+PASS Published old Release cannot downgrade this local build
+ALL PATCH CORE CHECKS PASSED

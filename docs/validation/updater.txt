@@ -1,0 +1,9 @@
+PASS New EXE automatically launches after old process exits
+PASS Target contains verified new binary
+PASS Old binary backed up as .previous
+PASS Atomic pending replacement consumed
+PASS Download remains cached without manual file handling
+PASS Successful update result recorded
+PASS Tampered cached download cannot replace the application
+PASS Older version rejected without modifying target
+ALL UPDATER INTEGRATION CHECKS PASSED

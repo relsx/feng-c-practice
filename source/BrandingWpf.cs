@@ -4,11 +4,11 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 static class Branding {
- public const string Title="Feng's C语言练习器 ver1.2.1.1";
+ public const string Title="Feng's C语言练习器 ver1.2.1.2";
  public const string Attribution="By Feng; 仅供学习使用；Email：feng111@bupt.edu.cn";
  public static UIElement Header(Action openSettings=null){
   var grid=new Grid{Margin=new Thickness(28,16,162,10)};grid.ColumnDefinitions.Add(new ColumnDefinition{Width=new GridLength(1,GridUnitType.Star)});grid.ColumnDefinitions.Add(new ColumnDefinition{Width=GridLength.Auto});
-  var left=new StackPanel();var title=new TextBlock{Margin=new Thickness(0,0,0,3)};title.Inlines.Add(new Run("Feng's "){FontFamily=new FontFamily("Georgia"),FontStyle=FontStyles.Italic,FontSize=24,Foreground=Theme.Blue});title.Inlines.Add(new Run("C语言练习器"){FontSize=18,FontWeight=FontWeights.SemiBold,Foreground=Theme.Ink});title.Inlines.Add(new Run("  ver1.2.1.1"){FontSize=11,FontFamily=new FontFamily("Consolas"),Foreground=Theme.Muted});left.Children.Add(title);
+  var left=new StackPanel();var title=new TextBlock{Margin=new Thickness(0,0,0,3)};title.Inlines.Add(new Run("Feng's "){FontFamily=new FontFamily("Georgia"),FontStyle=FontStyles.Italic,FontSize=24,Foreground=Theme.Blue});title.Inlines.Add(new Run("C语言练习器"){FontSize=18,FontWeight=FontWeights.SemiBold,Foreground=Theme.Ink});title.Inlines.Add(new Run("  ver1.2.1.2"){FontSize=11,FontFamily=new FontFamily("Consolas"),Foreground=Theme.Muted});left.Children.Add(title);
   left.Children.Add(Theme.Text("By Feng  ·  仅供学习使用",11,Theme.Muted));left.Children.Add(Theme.Text("Email：feng111@bupt.edu.cn",10,Theme.Muted));grid.Children.Add(left);
   var actions=new StackPanel{Orientation=Orientation.Horizontal,VerticalAlignment=VerticalAlignment.Center};var badge=new Border{Background=Theme.White,BorderBrush=Theme.Line,BorderThickness=new Thickness(1),CornerRadius=new CornerRadius(18),Padding=new Thickness(14,9,14,9),Margin=new Thickness(0,0,12,0),Child=Theme.Text("C  /  LEARN BY DOING",10,Theme.Blue,true)};actions.Children.Add(badge);var settings=Theme.Button("设置");settings.Margin=new Thickness(0);settings.Click+=(s,e)=>{if(openSettings!=null)openSettings();};actions.Children.Add(settings);Grid.SetColumn(actions,1);grid.Children.Add(actions);Action changed=()=>{if(!grid.Dispatcher.HasShutdownStarted)grid.Dispatcher.BeginInvoke((Action)(()=>{settings.ToolTip=UpdateService.Latest!=null&&UpdateService.Latest.Newer?"设置 · 有新版本":"设置 · 外观、字号与软件更新";}));};UpdateService.Changed+=changed;grid.Unloaded+=(s,e)=>UpdateService.Changed-=changed;
   return grid;

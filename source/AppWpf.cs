@@ -51,6 +51,7 @@ sealed class MainWindow : Window {
   run.Click+=async(s,e)=>await Evaluate(false);retest.Click+=async(s,e)=>await Evaluate(true);stop.Click+=(s,e)=>{if(cancel!=null)cancel.Cancel();};open.Click+=(s,e)=>Import();save.Click+=(s,e)=>SaveCode();reset.Click+=(s,e)=>{if(AppDialog.Show(this,"重置当前题目的草稿？","重置草稿",MessageBoxButton.YesNo,MessageBoxImage.Question)==MessageBoxResult.Yes)editor.Text=Starter;};
   Loaded+=async(s,e)=>{Filter();if(!preview){await Transitions.WhenReady(this);if(closed)return;var welcome=new WelcomeWindow{Owner=this};welcome.ShowDialog();if(!closed){editor.Input.Focus();AppSettings.Load();if(AppSettings.AutoCheck)await UpdateService.Check();updateTimer=new DispatcherTimer{Interval=TimeSpan.FromHours(1)};updateTimer.Tick+=async(a,b)=>{if(AppSettings.AutoCheck)await UpdateService.Check();};if(!closed)updateTimer.Start();}}};Closing+=HandleClosing;Closed+=(s,e)=>{closed=true;autosave.Stop();AppSettings.Changed-=ApplyPreferences;if(updateTimer!=null)updateTimer.Stop();};
  }
+ public void SaveForUpdate(){SaveDraft();if(dirty)throw new IOException("草稿尚未成功保存，暂不重启。请检查本地存储后重试。");}
  public bool IsEvaluating{get{return busy;}}
  void ApplyPreferences(){if(editor!=null){editor.SetFontSize(AppSettings.EditorFont);editor.SetAppearance(AppSettings.Night);}}
  void UpdatePosition(){if(editor==null||position==null)return;int index=editor.Input.CaretIndex,line=editor.Input.GetLineIndexFromCharacterIndex(index);if(line<0)return;int start=editor.Input.GetCharacterIndexFromLineIndex(line);string text="第 "+(line+1)+" 行 · 第 "+(index-start+1)+" 列";if(position.Text!=text){position.Text=text;PositionChangeCount++;}}
@@ -90,12 +91,14 @@ static class Program {
  [STAThread]public static void Run(string[] args){SetErrorMode(0x0001|0x0002|0x8000);System.Net.ServicePointManager.SecurityProtocol=System.Net.SecurityProtocolType.Tls12;bool capture=args.Length>=2&&(args[0].StartsWith("--screenshot")||args[0]=="--welcome-screenshot"||args[0]=="--ui-test");if(args.Length>=2&&(args[0]=="--selftest"||args[0]=="--v11-test"||args[0]=="--v11-ui-test"||args[0]=="--challenge-screenshot"||capture))Engine.DataRoot=System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.IO.Path.GetFullPath(args[1])),"test-state-blue");
   if(args.Length>=2&&args[0]=="--update-download-test"){V121Checks.DownloadConnection(args[1]);return;}
   if(args.Length>=2&&args[0]=="--update-check-test"){V121Checks.Connection(args[1]);return;}
+  if(args.Length>=2&&args[0]=="--patch-core-test"){PatchChecks.Core(args[1]);return;}
   if(args.Length>=2&&args[0]=="--glass-core-test"){GlassChecks.Core(args[1]);return;}
   if(args.Length>=2&&args[0]=="--v121-test"){V121Checks.Run(args[1]);return;}
   if(args.Length>=2&&args[0]=="--selftest"){try{SelfTest.Run(args[1],args.Length>=3&&args[2]=="quick");}catch(Exception ex){File.AppendAllText(args[1],"\nFATAL: "+ex);Environment.ExitCode=1;}return;}
   if(args.Length>=2&&args[0]=="--v11-test"){V11Checks.Run(args[1]);return;}
   if(args.Length>=2&&args[0]=="--v11-smoke"){V11Checks.Smoke(args[1]);return;}
   var app=new Application{ShutdownMode=ShutdownMode.OnMainWindowClose};Theme.Install();
+  if(args.Length>=2&&args[0]=="--patch-ui-test"){PatchChecks.UI(app,args[1]);return;}
   if(args.Length>=2&&args[0]=="--glass-ui-test"){GlassChecks.Run(app,args[1]);return;}
   if(args.Length>=2&&args[0]=="--challenge-preview"){Engine.DataRoot=System.IO.Path.Combine(System.IO.Path.GetFullPath(args[1]),"manual-challenge-state");app.Run(new ChallengeWindow(true));return;}
   if(args.Length>=2&&args[0]=="--v121-preview"){Engine.DataRoot=System.IO.Path.Combine(System.IO.Path.GetFullPath(args[1]),"manual-preview-state");app.Run(new MainWindow(true));return;}
