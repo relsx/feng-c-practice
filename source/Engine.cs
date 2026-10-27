@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
@@ -52,7 +52,7 @@ static class Engine {
    try{
     p.Start();job.Add(p);
     Task<string> stdout=read(p.StandardOutput),stderr=read(p.StandardError);
-    Task writer=Task.Factory.StartNew(()=>{try{p.StandardInput.Write(input);p.StandardInput.Close();}catch(IOException){}catch(ObjectDisposedException){} });
+    Task writer=Task.Factory.StartNew(()=>{try{byte[] data=new UTF8Encoding(false).GetBytes(input);p.StandardInput.BaseStream.Write(data,0,data.Length);p.StandardInput.BaseStream.Flush();p.StandardInput.Close();}catch(IOException){}catch(ObjectDisposedException){} });
     while(!p.WaitForExit(20)){if(ct.IsCancellationRequested){result.Failure="已停止";break;}if(watch.ElapsedMilliseconds>timeout){result.Failure="运行超时（"+(timeout/1000.0).ToString("0.#")+" 秒）";break;}if(Volatile.Read(ref overflow)!=0){result.Failure="输出超过 64 KiB 限制";break;}}
     if(result.Failure!=""&&!p.HasExited){try{p.Kill();}catch{} }
     job.Dispose();p.WaitForExit(1000);
@@ -101,12 +101,5 @@ static class Engine {
    return ev;
   }finally{try{Directory.Delete(dir,true);}catch{}}
  }
- public static string Report(Evaluation ev){var sb=new StringBuilder();sb.AppendLine(Branding.Title+" · 评测报告").AppendLine("题目："+ev.ProblemId.ToString("00")+" "+ev.Title).AppendLine("时间："+ev.Time).AppendLine("随机种子："+ev.Seed).AppendLine("得分："+ev.Score.ToString("0.0")+" / 100");
-  sb.AppendLine("随机正确性："+ev.NormalScore.ToString("0.0")+" / 60；边界正确性："+ev.EdgeScore.ToString("0.0")+" / 20；运行质量："+ev.QualityScore.ToString("0.0")+" / 10");
-  sb.AppendLine("简洁度："+(ev.LineScore+ev.SizeScore).ToString("0.0")+" / 10").AppendLine(CodeMetrics.Describe(ev)).AppendLine(Branding.Attribution);
-  sb.AppendLine("比较规则：忽略空白差异，整数精确比较，浮点数绝对误差 ≤ 0.0001；文本区分大小写。").AppendLine("运行质量：仅对答案正确、正常退出、无标准错误输出且 CPU 时间 ≤250ms 的用例计分。它是实用度的近似指标。");
-  sb.AppendLine("编译信息：").AppendLine(Theme.CompileAdvice(ev.Compiler,ev.Compiled));
-  for(int i=0;i<ev.Cases.Count;i++){var c=ev.Cases[i];sb.AppendLine("\n用例 "+(i+1)+" / "+(c.Test.Edge?"边界":"随机")+" / "+(c.Passed?"通过":"失败")+" / 墙钟 "+c.Run.Millis.ToString("0.0")+"ms / CPU "+c.Run.CpuMillis.ToString("0.0")+"ms").AppendLine("输入：").AppendLine(c.Test.Input).AppendLine("预期：").AppendLine(c.Test.Expected).AppendLine("实际：").AppendLine(c.Run.Output==""?"（无输出）":c.Run.Output).AppendLine("诊断："+c.Diagnosis).AppendLine("标准错误 / 中文解释："+Diagnostics.Explain(c.Run.Error));}
-  sb.AppendLine("\n提交代码：").AppendLine(ev.Code);return sb.ToString();
- }
+ public static string Report(Evaluation ev){return PracticeTools.Report(ev);}
 }

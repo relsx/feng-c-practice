@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -24,7 +24,7 @@ static class LegacyChallengeBank {
    new[]{@"\[", "数组与地址：下标从0开始，大小N的合法下标为0到N-1。a[i] 是元素，&a[i] 与 a+i 表示其地址。数组参数通常转为指针，不携带长度，需另传长度。"},
    new[]{@"\+|\-", "表达式：+ - * / % 进行算术运算，整数除法截断。+= -= *= /= %= 是复合赋值。先检查溢出；(long long)x*y 在乘法前扩展类型。比较使用 == != < <= > >=，= 是赋值。"},
    new[]{@"\bif\b|\?", "选择与逻辑：if/else 决定分支；条件?真值:假值 是条件运算符。&& 和 || 短路，! 取逻辑反；先测试范围再访问数组。它们不同于逐位的 &、|。"},
-   new[]{@"\bchar\b", "字符与字符串：'a' 是字符，\"abc\" 是包含结尾 '\0' 的字符串；字符可通过相减得到相对编码。\\n 是换行，\\t 是制表符，\\\\ 表示一个反斜杠；字符串缓冲区多留结束符的位置。"},
+   new[]{@"\bchar\b", "字符与字符串：'a' 是字符，\"abc\" 是包含结尾 '\\0' 的字符串；字符可通过相减得到相对编码。\\n 是换行，\\t 是制表符，\\\\ 表示一个反斜杠；字符串缓冲区多留结束符的位置。"},
    new[]{@"\bstrlen\b|\bstrcmp\b|\bstrncmp\b", "字符串库：strlen 返回不含结束符的长度，返回类型 size_t；strcmp/strncmp 返回负、零、正，零表示内容相同。不能用 == 比较两个字符串的内容。strncmp 只比较最多指定字节数。"},
    new[]{@"\bstruct\b|\btypedef\b", "记录类型：struct 合并字段，typedef 提供别名。对象.field 访问字段，pointer->field 访问指针所指对象字段；const 表示不得通过该变量改写对象。"},
    new[]{@"\bvoid\s*\*|\bint\s*\*|\bchar\s*\*", "指针：T *p 保存T对象的地址；*p 解引用，&x 取地址。NULL 不能解引用；指针运算只能在同一数组的合法范围内。void* 是通用对象指针，读取字段前要转回正确类型。"},

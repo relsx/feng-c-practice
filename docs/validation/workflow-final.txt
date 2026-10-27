@@ -1,0 +1,8 @@
+﻿PASS Mistake-book restore button restores the selected failed code
+PASS Restoring failed code backs up the original draft before replacement
+PASS Clicking a diagnostic returns editing focus to exactly line 4, column 4 after the dialog closes
+PASS Custom output preserves Chinese payload exactly in English mode
+PASS English results and exported report preserve raw input/output and submitted source
+PASS Switching the main output pane language never translates raw program data
+PASS Tool-only workflow does not modify graded score history
+ALL VER1.3 WORKFLOW CHECKS PASSED

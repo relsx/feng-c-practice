@@ -1,14 +1,21 @@
-PASS Old settings retain code font, theme and update choice; UI size defaults to 13
-PASS UI font independently selected: 12
-PASS UI font independently selected: 13
-PASS UI font independently selected: 14
-PASS UI font independently selected: 15
-PASS UI font independently selected: 16
-PASS Both font preferences reload independently
-PASS Embedded version is ver1.2.1.2
-PASS EXE size, checksum and four-part file version verification
-PASS Writable application directory updates without administrator privileges
-PASS Writeability check leaves no temporary files
-PASS Future official four-part Release is available for in-app update
-PASS Published old Release cannot downgrade this local build
-ALL PATCH CORE CHECKS PASSED
+﻿PASS Old settings default to Chinese
+PASS Selected default language survives a fresh settings reload
+PASS Built-in English translations
+PASS All 140 problem statements and challenge/practice knowledge explanations have English translations
+PASS Chinese round trip
+PASS Future two-part release names remain compatible with in-app updates
+PASS Diagnostic parsing handles Windows paths and rejects foreign, zero or overflowing lines
+PASS First mismatch identifies the actual differing token
+PASS Comparison retains existing whitespace and float tolerance
+PASS Case-sensitive text and missing output mark correctly
+PASS Compilation failure persists with code snapshot
+PASS Repeated failures deduplicate and retain up to three failing cases
+PASS Passing all tests resolves entry without overwriting the failed snapshot
+PASS New failure reopens resolved entry
+PASS Delete removes only the selected mistake entry
+PASS Custom input compiles and executes real C code
+PASS Custom compilation failure retains clickable locations
+PASS Custom execution enforces three-second timeout
+PASS Custom execution supports cancellation
+PASS Custom runs never score, unlock or write mistakes
+ALL VER1.3 CORE CHECKS PASSED

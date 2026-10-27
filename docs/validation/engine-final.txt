@@ -1,0 +1,33 @@
+﻿PASS Comments and blank lines do not penalize code
+PASS Whitespace and comment markers inside literals are preserved
+PASS Minifying does not hide statement count
+PASS Line threshold and linear penalty boundaries
+PASS Correct bloated code loses 10 simplicity points
+PASS Whitespace normalization
+PASS 64-bit integer exactness
+PASS Float absolute tolerance
+PASS Float precision rejection
+PASS NaN rejection
+PASS Infinity rejection
+PASS Binary string exactness
+PASS Numeric-looking string exactness
+PASS Extra output rejection
+PASS Wrong answer score zero and per-case diagnosis
+PASS Compiler line error
+PASS timeout compilation
+DETAIL timeout: 运行超时（0.3 秒）, output=0, elapsed=281.1795
+PASS Timeout enforcement
+PASS flood compilation
+DETAIL flood: 输出超过 64 KiB 限制, output=65457, elapsed=151.1097
+PASS Output flood limit
+PASS crash compilation
+DETAIL crash: 异常退出（代码 -1073741819 / 0xC0000005）, output=0, elapsed=38.6391
+PASS Crash detection
+PASS memory compilation
+DETAIL memory: , output=9, elapsed=38.4123
+PASS 256MiB memory limit
+PASS Cancellation terminates process
+PASS Seed reproduces inputs
+PASS Fresh seeds produce new random inputs
+
+TOTAL 27, FAILED 0, ALL PASSED

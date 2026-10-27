@@ -1,65 +1,21 @@
-PASS Main keeps integrated top and custom frame
-PASS Settings uses default system frame with no competing outer rounded clip
-PASS One in-app update action describes automatic download and restart
-PASS UI font 12 preserves code font, text, document and caret
-PASS Main title font applies exactly once at 12
-PASS Settings stays within owner at UI font 12
-PASS UI font 13 preserves code font, text, document and caret
-PASS Main title font applies exactly once at 13
-PASS Settings stays within owner at UI font 13
-PASS UI font 14 preserves code font, text, document and caret
-PASS Main title font applies exactly once at 14
-PASS Settings stays within owner at UI font 14
-PASS UI font 15 preserves code font, text, document and caret
-PASS Main title font applies exactly once at 15
-PASS Settings stays within owner at UI font 15
-PASS UI font 16 preserves code font, text, document and caret
-PASS Main title font applies exactly once at 16
-PASS Settings stays within owner at UI font 16
-PASS Code size remains independent of UI size
-PASS Startup welcome uses default native frame
-PASS Focused icon bounds stable: 设置 / 0
-PASS Modal uses system frame: 设置
-PASS Icon unchanged after modal closes: 设置 / 0
-PASS Focused icon bounds stable: 设置 / 1
-PASS Modal uses system frame: 设置
-PASS Icon unchanged after modal closes: 设置 / 1
-PASS Focused icon bounds stable: 知识点学习 / 0
-PASS Modal uses system frame: 知识点学习
-PASS Icon unchanged after modal closes: 知识点学习 / 0
-PASS Focused icon bounds stable: 知识点学习 / 1
-PASS Modal uses system frame: 知识点学习
-PASS Icon unchanged after modal closes: 知识点学习 / 1
-PASS Focused icon bounds stable: 提示 / 标准答案 / 0
-PASS Modal uses system frame: 提示 / 标准答案
-PASS Icon unchanged after modal closes: 提示 / 标准答案 / 0
-PASS Focused icon bounds stable: 提示 / 标准答案 / 1
-PASS Modal uses system frame: 提示 / 标准答案
-PASS Icon unchanged after modal closes: 提示 / 标准答案 / 1
-PASS Focused icon bounds stable: 评分说明 / 0
-PASS Modal uses system frame: 评分说明
-PASS Icon unchanged after modal closes: 评分说明 / 0
-PASS Focused icon bounds stable: 评分说明 / 1
-PASS Modal uses system frame: 评分说明
-PASS Icon unchanged after modal closes: 评分说明 / 1
-PASS Challenge secondary window also uses the native frame
-PASS Readable independent editors at UI 12 dark False layout 96dpi; heights 1129 / 1035
-PASS Readable independent editors at UI 12 dark False layout 144dpi; heights 596 / 502
-PASS Readable independent editors at UI 12 dark False layout 192dpi; heights 329 / 243
-PASS Readable independent editors at UI 12 dark True layout 96dpi; heights 1129 / 1035
-PASS Readable independent editors at UI 12 dark True layout 144dpi; heights 596 / 502
-PASS Readable independent editors at UI 12 dark True layout 192dpi; heights 329 / 243
-PASS Readable independent editors at UI 13 dark False layout 96dpi; heights 1094 / 989
-PASS Readable independent editors at UI 13 dark False layout 144dpi; heights 561 / 456
-PASS Readable independent editors at UI 13 dark False layout 192dpi; heights 294 / 221
-PASS Readable independent editors at UI 13 dark True layout 96dpi; heights 1094 / 989
-PASS Readable independent editors at UI 13 dark True layout 144dpi; heights 561 / 456
-PASS Readable independent editors at UI 13 dark True layout 192dpi; heights 294 / 221
-PASS Readable independent editors at UI 16 dark False layout 96dpi; heights 988 / 852
-PASS Readable independent editors at UI 16 dark False layout 144dpi; heights 455 / 319
-PASS Readable independent editors at UI 16 dark False layout 192dpi; heights 188 / 191
-PASS Readable independent editors at UI 16 dark True layout 96dpi; heights 988 / 852
-PASS Readable independent editors at UI 16 dark True layout 144dpi; heights 455 / 319
-PASS Readable independent editors at UI 16 dark True layout 192dpi; heights 188 / 191
-PASS All character hit positions match: 17928
-ALL PATCH UI CHECKS PASSED
+﻿PASS Existing icon glyphs retained after language change
+PASS Live English title 0
+PASS Live Chinese title 0
+PASS Existing icon glyphs retained after language change
+PASS Live English title 1
+PASS Live Chinese title 1
+PASS Existing icon glyphs retained after language change
+PASS Live English title 2
+PASS Live Chinese title 2
+PASS Repeated language switches preserve document, code, caret and undo
+PASS English autosave state does not repeatedly redraw identical text
+PASS Localized data-bound labels retain bindings and refresh when source data changes
+PASS Click jump clamps columns to the requested line
+PASS Invalid diagnostic line leaves caret unchanged
+PASS Open settings switches to English
+PASS Custom input is never translated or altered
+PASS Challenge timer and typed code survive language switch
+PASS New tools do not unlock challenge answers
+PASS Dynamic button captions and non-result output messages switch language without stale visual text
+PASS All cursor hit positions match across languages and font sizes: 1824
+ALL VER1.3 UI CHECKS PASSED

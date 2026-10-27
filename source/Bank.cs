@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -8,7 +8,7 @@ class Problem {
  public Problem(int id,string t,string c,string s,string h,string code){Id=id;Title=t;Category=c;Statement=s;Hint=h;Reference=code;}
  public override string ToString(){return Id.ToString("00")+"  "+Title;}
 }
-class TestCase {public string Input,Expected; public bool Edge; public TestCase(string i,string o,bool e){Input=i;Expected=o;Edge=e;}}
+class TestCase {public string Input,Expected; public bool Edge; public TestCase(){} public TestCase(string i,string o,bool e){Input=i;Expected=o;Edge=e;}}
 static partial class Bank {
  static int V(Random r,int e,int lo,int hi,params int[] values){return e>=0?values[e%values.Length]:r.Next(lo,hi+1);}
  static bool Prime(int n){if(n<2)return false;for(int i=2;i*i<=n;i++)if(n%i==0)return false;return true;}

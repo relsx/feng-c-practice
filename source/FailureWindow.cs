@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,7 +22,7 @@ sealed class FailureWindow : Window {
  public static bool ShouldPlay(Evaluation e){return e!=null&&(!e.Compiled||e.Score<60||e.Cases.Any(c=>c.Run.Failure!=""||c.Run.ExitCode!=0));}
  public static string Reason(Evaluation e){if(!e.Compiled)return "编译失败 · 封印反噬";if(e.Cases.Any(c=>c.Run.Failure!=""||c.Run.ExitCode!=0))return "运行失败 · 暗域吞噬";return "得分 "+e.Score.ToString("0.#")+" / 100 · 未达到60分";}
  static BitmapSource Texture(string name){BitmapSource found;if(textures.TryGetValue(name,out found))return found;using(Stream s=Assembly.GetExecutingAssembly().GetManifestResourceStream("fx."+name)){if(s==null)throw new IOException("动画素材缺失："+name);var image=new BitmapImage();image.BeginInit();image.CacheOption=BitmapCacheOption.OnLoad;image.StreamSource=s;image.EndInit();image.Freeze();textures[name]=image;return image;}}
- public FailureWindow(string reason,bool previewMode=false){preview=previewMode;Title="暗域审判 · 挑战失败";WindowStyle=WindowStyle.None;ResizeMode=ResizeMode.NoResize;AllowsTransparency=true;ShowInTaskbar=false;Topmost=!preview;WindowStartupLocation=WindowStartupLocation.CenterOwner;Width=1280;Height=800;Background=Brushes.Transparent;UseLayoutRounding=true;SnapsToDevicePixels=true;Opacity=0;
+ public FailureWindow(string reason,bool previewMode=false){L.Attach(this);preview=previewMode;Title="暗域审判 · 挑战失败";WindowStyle=WindowStyle.None;ResizeMode=ResizeMode.NoResize;AllowsTransparency=true;ShowInTaskbar=false;Topmost=!preview;WindowStartupLocation=WindowStartupLocation.CenterOwner;Width=1280;Height=800;Background=Brushes.Transparent;UseLayoutRounding=true;SnapsToDevicePixels=true;Opacity=0;
   AllowsTransparency=false;Background=Brushes.Black;Opacity=1;scene=new Grid{ClipToBounds=true,Background=Brushes.Black};Content=scene;front=new Grid{Background=Brushes.Black,Opacity=0};scene.Children.Add(front);stage=new Canvas{Width=1600,Height=1000,ClipToBounds=true};front.Children.Add(new Viewbox{Child=stage,Stretch=Stretch.Uniform});
   stage.Children.Add(new Rectangle{Width=1600,Height=1000,Fill=new RadialGradientBrush(new GradientStopCollection{new GradientStop(Color.FromRgb(54,9,23),0),new GradientStop(Color.FromRgb(17,7,16),.55),new GradientStop(Color.FromRgb(2,3,7),1)})});
   var glow=new Ellipse{Width=950,Height=850,Fill=new RadialGradientBrush(Color.FromArgb(82,189,28,61),Colors.Transparent)};At(glow,325,-80);stage.Children.Add(glow);cues.Add(()=>glow.BeginAnimation(OpacityProperty,new DoubleAnimation(.4,1,TimeSpan.FromSeconds(1.5)){AutoReverse=true}));BuildSeal();BuildMist();
