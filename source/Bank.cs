@@ -4,9 +4,10 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 class Problem {
+ public int Number{get{return NumberOf(Id);}} public static int NumberOf(int id){return PracticeOrder.Number(id);}
  public int Id; public string Title,Category,Statement,Hint,Reference;
  public Problem(int id,string t,string c,string s,string h,string code){Id=id;Title=t;Category=c;Statement=s;Hint=h;Reference=code;}
- public override string ToString(){return Id.ToString("00")+"  "+Title;}
+ public override string ToString(){return Number.ToString("00")+"  "+Title;}
 }
 class TestCase {public string Input,Expected; public bool Edge; public TestCase(){} public TestCase(string i,string o,bool e){Input=i;Expected=o;Edge=e;}}
 static partial class Bank {
@@ -16,6 +17,7 @@ static partial class Bank {
  static string F(double x){return x.ToString("F8",CultureInfo.InvariantCulture);}
  static string Join(IEnumerable<int> a){return string.Join(" ",a.Select(x=>x.ToString()).ToArray());}
  public static TestCase Generate(int id,Random r,int e){
+  if(NewBank.IsNew(id))return NewBank.Generate(id,r,e);
   if(id>60)return Advanced(id,r,e);
   string input="",output=""; int a=0,b=0,c=0,n=0; long z=0;
   if(id<=4||id==8||id==11||id==27||id==28){

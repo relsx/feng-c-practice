@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -60,7 +60,7 @@ static class ChallengeBank {
  a[39].Problem.Reference=C("    int n,a[150],c=0;scanf(\"%d\",&n);for(int i=0;i<n;i++)scanf(\"%d\",a+i);for(int i=0;i<n;i++)for(int j=i+1;j<n;j++)if(a[i]>a[j])c++;printf(\"%d\\n\",c);");
  return LegacyChallengeBank.TeachNewSyntax(a);
  }
- static void AddOrdinary(List<ChallengeLevel> a,int n,int id,string title,string steps){var p=Bank.All().First(x=>x.Id==id);a.Add(new ChallengeLevel{Number=n,Problem=new Problem(100+n,title,"暗域 · "+Chapters[(n-1)/10],p.Statement,p.Hint,p.Reference),Learning=Lesson(n,p.Hint,steps,"数组大小要覆盖最大id；只在条件满足时更新状态，操作失败时保持原状。注意题目规定的输出精度与空数据情况。")});}
+ static void AddOrdinary(List<ChallengeLevel> a,int n,int id,string title,string steps){var p=Bank.OriginalAll().First(x=>x.Id==id);a.Add(new ChallengeLevel{Number=n,Problem=new Problem(100+n,title,"暗域 · "+Chapters[(n-1)/10],p.Statement,p.Hint,p.Reference),Learning=Lesson(n,p.Hint,steps,"数组大小要覆盖最大id；只在条件满足时更新状态，操作失败时保持原状。注意题目规定的输出精度与空数据情况。")});}
  static bool Prime(int n){return n>=2&&!Enumerable.Range(2,Math.Max(0,(int)Math.Sqrt(n)-1)).Any(d=>n%d==0);}
  static string J<T>(IEnumerable<T> values){return string.Join(" ",values.Select(x=>Convert.ToString(x,CultureInfo.InvariantCulture)).ToArray());}
  public static List<TestCase> Tests(int id,int seed){var r=new Random(seed);var list=new List<TestCase>();for(int i=0;i<8;i++)list.Add(Generate(id,r,i));for(int i=0;i<20;i++)list.Add(Generate(id,r,-1));return list;}

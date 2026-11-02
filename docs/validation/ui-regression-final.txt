@@ -1,0 +1,21 @@
+﻿PASS Existing icon glyphs retained after language change
+PASS Live English title 0
+PASS Live Chinese title 0
+PASS Existing icon glyphs retained after language change
+PASS Live English title 1
+PASS Live Chinese title 1
+PASS Existing icon glyphs retained after language change
+PASS Live English title 2
+PASS Live Chinese title 2
+PASS Repeated language switches preserve document, code, caret and undo
+PASS English autosave state does not repeatedly redraw identical text
+PASS Localized data-bound labels retain bindings and refresh when source data changes
+PASS Click jump clamps columns to the requested line
+PASS Invalid diagnostic line leaves caret unchanged
+PASS Open settings switches to English
+PASS Custom input is never translated or altered
+PASS Challenge timer and typed code survive language switch
+PASS New tools do not unlock challenge answers
+PASS Dynamic button captions and non-result output messages switch language without stale visual text
+PASS All cursor hit positions match across languages and font sizes: 1824
+ALL VER1.3 UI CHECKS PASSED

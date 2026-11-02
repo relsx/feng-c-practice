@@ -19,6 +19,7 @@ static class PracticeKnowledge {
  public static PracticeLesson For(int id){return All.First(x=>x.Problem.Id==id);}
  static string Clean(string source){string s=Regex.Replace(source,@"/\*[\s\S]*?\*/|//[^\r\n]*|""(?:\\.|[^""\\])*""|'(?:\\.|[^'\\])*'",m=>m.Value.StartsWith("/*")||m.Value.StartsWith("//")?" ":"LITERAL");return Regex.Replace(s,@"^\s*#.*$","",RegexOptions.Multiline);}
  static List<KnowledgeTopic> Topics(){return new List<KnowledgeTopic>{
+  new KnowledgeTopic("stdio-stream","getchar / putchar 与 EOF",@"\b(getchar|putchar)\s*\(","getchar读取一个字节并以int返回；EOF是结束标记，不能把返回值先存入char再比较。putchar输出一个字符。读取循环需同时处理换行与EOF，空行也应得到正确结果。",true),
   new KnowledgeTopic("structure","C 程序结构、头文件与入口",@"\bmain\s*\(","#include <stdio.h> 引入标准输入输出函数的声明。int main(void) 是程序入口，花括号定义代码块，分号结束声明或语句。return 0 通常表示正常结束。变量在使用前要声明，局部变量若未初始化，其数值不可依赖。",true),
   new KnowledgeTopic("int","int、变量、初始化与赋值",@"\bint\b","int 保存整数。int value = 0 同时声明并初始化；后续 value = 8 修改值。= 是赋值，== 才是比较。声明的作用域从声明处开始，到所在代码块结束；同一作用域不能重复定义同名变量。"),
   new KnowledgeTopic("scanf","scanf 输入、格式串与取地址 &",@"\bscanf\s*\(","scanf(\"%d\", &value) 按格式读取 int；&value 表示变量地址，函数通过该地址写入。多个格式项与实参一一对应。scanf 返回成功读取项数；本软件的判题数据符合题目格式。读取字符串数组传数组名，不额外加 &。",true),
@@ -59,7 +60,7 @@ static class PracticeKnowledge {
   new KnowledgeTopic("sortlib","qsort 与比较回调",@"\bqsort\s*\(","qsort 来自 stdlib.h，参数包含数组、元素个数、单个元素字节数与比较函数。比较函数接收 const void*，按正确类型读取后返回负、零或正；不应改写被比较的对象。不要直接相减可能溢出的两个整数作为比较结果。",true),
   new KnowledgeTopic("copy","memcpy / memset 与字节操作",@"\b(memcpy|memset)\s*\(","memcpy 按字节复制，要求源、目标区域不重叠；有重叠时使用 memmove。memset 按字节重复写入，不能把它当作给 int 数组填入任意整数值的操作。字符串复制必须为结束符保留容量。",true)
  };}
- static List<PracticeLesson> Build(){var topics=Topics();var lessons=new List<PracticeLesson>();foreach(var p in Bank.All().OrderBy(p=>p.Id)){var lesson=new PracticeLesson{Problem=p,Goal=Goals[p.Id-1]};string clean=Clean(p.Reference);foreach(var t in topics){if(!Regex.IsMatch(t.Raw?p.Reference:clean,t.Pattern))continue;if(t.FirstProblem==0){t.FirstProblem=p.Id;lesson.New.Add(t);}else lesson.Review.Add(t);}lessons.Add(lesson);}return lessons;}
+ static List<PracticeLesson> Build(){var topics=Topics();var lessons=new List<PracticeLesson>();foreach(var p in Bank.All().OrderBy(p=>p.Number)){var lesson=new PracticeLesson{Problem=p,Goal=NewBank.IsNew(p.Id)?NewBank.Goal(p.Id):Goals[p.Id-1]};string clean=Clean(p.Reference);foreach(var t in topics){if(!Regex.IsMatch(t.Raw?p.Reference:clean,t.Pattern))continue;if(t.FirstProblem==0){t.FirstProblem=p.Id;lesson.New.Add(t);}else lesson.Review.Add(t);}lessons.Add(lesson);}return lessons;}
  // The wording describes concepts and pitfalls, without including a full solution.
  static readonly string[] Goals={
   "分清输入、计算、输出三个阶段，认识标准输入输出及整数变量。","比较加减法的顺序，理解负数也可直接按整数输出。","练习乘法表达式，先估算输入上界对应的结果范围。","区分整数商与余数，确认除数必须非零。","理解整数除法会截断，精度要在计算阶段保留。","用明确的数学表达式完成单位换算，注意乘除先后。","认识常量与浮点输出，理解面积公式中的乘法。","通过临时变量保存旧值，避免交换时覆盖仍需使用的数据。","理解正、负、零的区分，避免对整型最小值直接取负。","拆解坐标差与平方，利用括号保持计算含义。",
@@ -76,9 +77,9 @@ static class PracticeKnowledge {
 
 sealed class KnowledgeWindow : Window {
  public readonly PracticeLesson Lesson;
- public KnowledgeWindow(Problem p){Lesson=PracticeKnowledge.For(p.Id);Title="知识点学习 · "+p.Id.ToString("00")+" "+p.Title;Width=900;Height=730;MinWidth=640;MinHeight=480;WindowStartupLocation=WindowStartupLocation.CenterOwner;ShowInTaskbar=false;Theme.Window(this);
+ public KnowledgeWindow(Problem p){Lesson=PracticeKnowledge.For(p.Id);Title="知识点学习 · "+p.Number.ToString("00")+" "+p.Title;Width=900;Height=730;MinWidth=640;MinHeight=480;WindowStartupLocation=WindowStartupLocation.CenterOwner;ShowInTaskbar=false;Theme.Window(this);
   var root=new Grid();root.RowDefinitions.Add(new RowDefinition{Height=GridLength.Auto});root.RowDefinitions.Add(new RowDefinition{Height=new GridLength(1,GridUnitType.Star)});root.RowDefinitions.Add(new RowDefinition{Height=GridLength.Auto});Content=new Border{Background=Theme.Bg,Padding=new Thickness(22),Child=root};
-  var header=new StackPanel{Margin=new Thickness(0,0,0,14)};header.Children.Add(Theme.Text(p.Id.ToString("00")+" · "+p.Title,21,Theme.Blue,true));var intro=Theme.Text("按题号递进学习 · 首次出现按题号判定，可随时回顾相关基础",11,Theme.Muted);intro.Margin=new Thickness(0,6,0,0);header.Children.Add(intro);root.Children.Add(header);
+  var header=new StackPanel{Margin=new Thickness(0,0,0,14)};header.Children.Add(Theme.Text(p.Number.ToString("00")+" · "+p.Title,21,Theme.Blue,true));var intro=Theme.Text("按题号递进学习 · 首次出现按题号判定，可随时回顾相关基础",11,Theme.Muted);intro.Margin=new Thickness(0,6,0,0);header.Children.Add(intro);root.Children.Add(header);
   var tabs=new TabControl{Background=Theme.White,BorderBrush=Theme.Line};Grid.SetRow(tabs,1);root.Children.Add(tabs);GlassMotion.WatchTabs(tabs);
   var study=new StackPanel{Margin=new Thickness(18)};study.Children.Add(Theme.Text("本题学习目标",15,Theme.Blue,true));var goal=Theme.Text(Lesson.Goal,14);goal.Margin=new Thickness(0,10,0,20);study.Children.Add(goal);study.Children.Add(Theme.Text("本题首次出现的语法 / 用法",15,Theme.Blue,true));
   if(Lesson.New.Count==0){var text=Theme.Text("本题没有新增语法，重点是组合运用已有知识。右侧“相关基础回顾”可补看涉及的语法。",13,Theme.Muted);text.Margin=new Thickness(0,12,0,0);study.Children.Add(text);}foreach(var topic in Lesson.New)AddTopic(study,topic,false);tabs.Items.Add(new TabItem{Header="本题学习",Content=Scroll(study)});
@@ -86,5 +87,5 @@ sealed class KnowledgeWindow : Window {
   var footer=new DockPanel{Margin=new Thickness(0,16,0,0)};var close=Theme.Button("返回练习",true);close.IsCancel=true;close.IsDefault=true;close.Click+=(s,e)=>Close();DockPanel.SetDock(close,Dock.Right);footer.Children.Add(close);footer.Children.Add(Theme.Text(Branding.Attribution,10.5,Theme.Muted));Grid.SetRow(footer,2);root.Children.Add(footer);
  }
  static ScrollViewer Scroll(UIElement child){return new ScrollViewer{Content=child,VerticalScrollBarVisibility=ScrollBarVisibility.Auto,HorizontalScrollBarVisibility=ScrollBarVisibility.Disabled};}
- static void AddTopic(StackPanel panel,KnowledgeTopic topic,bool review){var content=new StackPanel();content.Children.Add(Theme.Text(topic.Title+(review?"  · 首见第 "+topic.FirstProblem.ToString("00")+" 题":""),14,Theme.Ink,true));var text=Theme.Text(topic.Explanation,13);text.Margin=new Thickness(0,8,0,0);content.Children.Add(text);var card=Theme.Card(content,new Thickness(14));card.Margin=new Thickness(0,12,0,0);panel.Children.Add(card);}
+ static void AddTopic(StackPanel panel,KnowledgeTopic topic,bool review){var content=new StackPanel();content.Children.Add(Theme.Text(topic.Title+(review?"  · 首见第 "+Problem.NumberOf(topic.FirstProblem).ToString("00")+" 题":""),14,Theme.Ink,true));var text=Theme.Text(topic.Explanation,13);text.Margin=new Thickness(0,8,0,0);content.Children.Add(text);var card=Theme.Card(content,new Thickness(14));card.Margin=new Thickness(0,12,0,0);panel.Children.Add(card);}
 }

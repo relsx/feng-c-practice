@@ -1,7 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 static partial class Bank {
-public static List<Problem> All() { var a=new List<Problem>();
+public static List<Problem> All(){return ScenarioRevision.Apply(OriginalAll());}
+public static List<Problem> OriginalAll() { var a=new List<Problem>();
 a.Add(new Problem(1,@"两数之和",@"输入输出",@"输入两个整数 a、b（-10000 到 10000），输出 a+b。",@"scanf 读取两个整数，printf 输出结果。",@"#include <stdio.h>
 
 int main(void)

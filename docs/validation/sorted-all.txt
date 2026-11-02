@@ -1,0 +1,1469 @@
+﻿PASS 150 consecutive display numbers and unique stable storage IDs
+PASS Existing 90 IDs retained; new ordinary IDs do not overlap dark levels
+PASS Difficulty progression ends with three comprehensive projects
+PASS Knowledge first appearances follow new difficulty order
+PASS 149 of 150 references use stdio.h alone; linked-list allocation lesson retains stdlib.h
+PASS All 150 knowledge lessons available
+PASS English content 1
+PASS English content 1
+PASS English content 1
+PASS English content 1
+PASS English content 1
+PASS English content 2
+PASS English content 2
+PASS English content 2
+PASS English content 2
+PASS English content 2
+PASS English content 3
+PASS English content 3
+PASS English content 3
+PASS English content 3
+PASS English content 3
+PASS English content 4
+PASS English content 4
+PASS English content 4
+PASS English content 4
+PASS English content 4
+PASS English content 5
+PASS English content 5
+PASS English content 5
+PASS English content 5
+PASS English content 5
+PASS English content 6
+PASS English content 6
+PASS English content 6
+PASS English content 6
+PASS English content 6
+PASS English content 7
+PASS English content 7
+PASS English content 7
+PASS English content 7
+PASS English content 7
+PASS English content 8
+PASS English content 8
+PASS English content 8
+PASS English content 8
+PASS English content 8
+PASS English content 9
+PASS English content 9
+PASS English content 9
+PASS English content 9
+PASS English content 9
+PASS English content 10
+PASS English content 10
+PASS English content 10
+PASS English content 10
+PASS English content 10
+PASS English content 11
+PASS English content 11
+PASS English content 11
+PASS English content 11
+PASS English content 11
+PASS English content 12
+PASS English content 12
+PASS English content 12
+PASS English content 12
+PASS English content 12
+PASS English content 13
+PASS English content 13
+PASS English content 13
+PASS English content 13
+PASS English content 13
+PASS English content 14
+PASS English content 14
+PASS English content 14
+PASS English content 14
+PASS English content 14
+PASS English content 15
+PASS English content 15
+PASS English content 15
+PASS English content 15
+PASS English content 15
+PASS English content 16
+PASS English content 16
+PASS English content 16
+PASS English content 16
+PASS English content 16
+PASS English content 17
+PASS English content 17
+PASS English content 17
+PASS English content 17
+PASS English content 17
+PASS English content 18
+PASS English content 18
+PASS English content 18
+PASS English content 18
+PASS English content 18
+PASS English content 19
+PASS English content 19
+PASS English content 19
+PASS English content 19
+PASS English content 19
+PASS English content 20
+PASS English content 20
+PASS English content 20
+PASS English content 20
+PASS English content 20
+PASS English content 21
+PASS English content 21
+PASS English content 21
+PASS English content 21
+PASS English content 21
+PASS English content 22
+PASS English content 22
+PASS English content 22
+PASS English content 22
+PASS English content 22
+PASS English content 23
+PASS English content 23
+PASS English content 23
+PASS English content 23
+PASS English content 23
+PASS English content 24
+PASS English content 24
+PASS English content 24
+PASS English content 24
+PASS English content 24
+PASS English content 25
+PASS English content 25
+PASS English content 25
+PASS English content 25
+PASS English content 25
+PASS English content 26
+PASS English content 26
+PASS English content 26
+PASS English content 26
+PASS English content 26
+PASS English content 27
+PASS English content 27
+PASS English content 27
+PASS English content 27
+PASS English content 27
+PASS English content 28
+PASS English content 28
+PASS English content 28
+PASS English content 28
+PASS English content 28
+PASS English content 29
+PASS English content 29
+PASS English content 29
+PASS English content 29
+PASS English content 29
+PASS English content 30
+PASS English content 30
+PASS English content 30
+PASS English content 30
+PASS English content 30
+PASS English content 31
+PASS English content 31
+PASS English content 31
+PASS English content 31
+PASS English content 31
+PASS English content 32
+PASS English content 32
+PASS English content 32
+PASS English content 32
+PASS English content 32
+PASS English content 33
+PASS English content 33
+PASS English content 33
+PASS English content 33
+PASS English content 33
+PASS English content 34
+PASS English content 34
+PASS English content 34
+PASS English content 34
+PASS English content 34
+PASS English content 35
+PASS English content 35
+PASS English content 35
+PASS English content 35
+PASS English content 35
+PASS English content 36
+PASS English content 36
+PASS English content 36
+PASS English content 36
+PASS English content 36
+PASS English content 37
+PASS English content 37
+PASS English content 37
+PASS English content 37
+PASS English content 37
+PASS English content 38
+PASS English content 38
+PASS English content 38
+PASS English content 38
+PASS English content 38
+PASS English content 39
+PASS English content 39
+PASS English content 39
+PASS English content 39
+PASS English content 39
+PASS English content 40
+PASS English content 40
+PASS English content 40
+PASS English content 40
+PASS English content 40
+PASS English content 41
+PASS English content 41
+PASS English content 41
+PASS English content 41
+PASS English content 41
+PASS English content 42
+PASS English content 42
+PASS English content 42
+PASS English content 42
+PASS English content 42
+PASS English content 43
+PASS English content 43
+PASS English content 43
+PASS English content 43
+PASS English content 43
+PASS English content 44
+PASS English content 44
+PASS English content 44
+PASS English content 44
+PASS English content 44
+PASS English content 45
+PASS English content 45
+PASS English content 45
+PASS English content 45
+PASS English content 45
+PASS English content 46
+PASS English content 46
+PASS English content 46
+PASS English content 46
+PASS English content 46
+PASS English content 47
+PASS English content 47
+PASS English content 47
+PASS English content 47
+PASS English content 47
+PASS English content 48
+PASS English content 48
+PASS English content 48
+PASS English content 48
+PASS English content 48
+PASS English content 49
+PASS English content 49
+PASS English content 49
+PASS English content 49
+PASS English content 49
+PASS English content 50
+PASS English content 50
+PASS English content 50
+PASS English content 50
+PASS English content 50
+PASS English content 51
+PASS English content 51
+PASS English content 51
+PASS English content 51
+PASS English content 51
+PASS English content 52
+PASS English content 52
+PASS English content 52
+PASS English content 52
+PASS English content 52
+PASS English content 53
+PASS English content 53
+PASS English content 53
+PASS English content 53
+PASS English content 53
+PASS English content 54
+PASS English content 54
+PASS English content 54
+PASS English content 54
+PASS English content 54
+PASS English content 55
+PASS English content 55
+PASS English content 55
+PASS English content 55
+PASS English content 55
+PASS English content 56
+PASS English content 56
+PASS English content 56
+PASS English content 56
+PASS English content 56
+PASS English content 57
+PASS English content 57
+PASS English content 57
+PASS English content 57
+PASS English content 57
+PASS English content 58
+PASS English content 58
+PASS English content 58
+PASS English content 58
+PASS English content 58
+PASS English content 59
+PASS English content 59
+PASS English content 59
+PASS English content 59
+PASS English content 59
+PASS English content 60
+PASS English content 60
+PASS English content 60
+PASS English content 60
+PASS English content 60
+PASS English content 61
+PASS English content 61
+PASS English content 61
+PASS English content 61
+PASS English content 61
+PASS English content 62
+PASS English content 62
+PASS English content 62
+PASS English content 62
+PASS English content 62
+PASS English content 63
+PASS English content 63
+PASS English content 63
+PASS English content 63
+PASS English content 63
+PASS English content 64
+PASS English content 64
+PASS English content 64
+PASS English content 64
+PASS English content 64
+PASS English content 65
+PASS English content 65
+PASS English content 65
+PASS English content 65
+PASS English content 65
+PASS English content 66
+PASS English content 66
+PASS English content 66
+PASS English content 66
+PASS English content 66
+PASS English content 67
+PASS English content 67
+PASS English content 67
+PASS English content 67
+PASS English content 67
+PASS English content 68
+PASS English content 68
+PASS English content 68
+PASS English content 68
+PASS English content 68
+PASS English content 69
+PASS English content 69
+PASS English content 69
+PASS English content 69
+PASS English content 69
+PASS English content 70
+PASS English content 70
+PASS English content 70
+PASS English content 70
+PASS English content 70
+PASS English content 71
+PASS English content 71
+PASS English content 71
+PASS English content 71
+PASS English content 71
+PASS English content 72
+PASS English content 72
+PASS English content 72
+PASS English content 72
+PASS English content 72
+PASS English content 73
+PASS English content 73
+PASS English content 73
+PASS English content 73
+PASS English content 73
+PASS English content 74
+PASS English content 74
+PASS English content 74
+PASS English content 74
+PASS English content 74
+PASS English content 75
+PASS English content 75
+PASS English content 75
+PASS English content 75
+PASS English content 75
+PASS English content 76
+PASS English content 76
+PASS English content 76
+PASS English content 76
+PASS English content 76
+PASS English content 77
+PASS English content 77
+PASS English content 77
+PASS English content 77
+PASS English content 77
+PASS English content 78
+PASS English content 78
+PASS English content 78
+PASS English content 78
+PASS English content 78
+PASS English content 79
+PASS English content 79
+PASS English content 79
+PASS English content 79
+PASS English content 79
+PASS English content 80
+PASS English content 80
+PASS English content 80
+PASS English content 80
+PASS English content 80
+PASS English content 81
+PASS English content 81
+PASS English content 81
+PASS English content 81
+PASS English content 81
+PASS English content 82
+PASS English content 82
+PASS English content 82
+PASS English content 82
+PASS English content 82
+PASS English content 83
+PASS English content 83
+PASS English content 83
+PASS English content 83
+PASS English content 83
+PASS English content 84
+PASS English content 84
+PASS English content 84
+PASS English content 84
+PASS English content 84
+PASS English content 85
+PASS English content 85
+PASS English content 85
+PASS English content 85
+PASS English content 85
+PASS English content 86
+PASS English content 86
+PASS English content 86
+PASS English content 86
+PASS English content 86
+PASS English content 87
+PASS English content 87
+PASS English content 87
+PASS English content 87
+PASS English content 87
+PASS English content 88
+PASS English content 88
+PASS English content 88
+PASS English content 88
+PASS English content 88
+PASS English content 89
+PASS English content 89
+PASS English content 89
+PASS English content 89
+PASS English content 89
+PASS English content 90
+PASS English content 90
+PASS English content 90
+PASS English content 90
+PASS English content 90
+PASS English content 91
+PASS English content 91
+PASS English content 91
+PASS English content 91
+PASS English content 91
+PASS English content 92
+PASS English content 92
+PASS English content 92
+PASS English content 92
+PASS English content 92
+PASS English content 93
+PASS English content 93
+PASS English content 93
+PASS English content 93
+PASS English content 93
+PASS English content 94
+PASS English content 94
+PASS English content 94
+PASS English content 94
+PASS English content 94
+PASS English content 95
+PASS English content 95
+PASS English content 95
+PASS English content 95
+PASS English content 95
+PASS English content 96
+PASS English content 96
+PASS English content 96
+PASS English content 96
+PASS English content 96
+PASS English content 97
+PASS English content 97
+PASS English content 97
+PASS English content 97
+PASS English content 97
+PASS English content 98
+PASS English content 98
+PASS English content 98
+PASS English content 98
+PASS English content 98
+PASS English content 99
+PASS English content 99
+PASS English content 99
+PASS English content 99
+PASS English content 99
+PASS English content 100
+PASS English content 100
+PASS English content 100
+PASS English content 100
+PASS English content 100
+PASS English content 101
+PASS English content 101
+PASS English content 101
+PASS English content 101
+PASS English content 101
+PASS English content 102
+PASS English content 102
+PASS English content 102
+PASS English content 102
+PASS English content 102
+PASS English content 103
+PASS English content 103
+PASS English content 103
+PASS English content 103
+PASS English content 103
+PASS English content 104
+PASS English content 104
+PASS English content 104
+PASS English content 104
+PASS English content 104
+PASS English content 105
+PASS English content 105
+PASS English content 105
+PASS English content 105
+PASS English content 105
+PASS English content 106
+PASS English content 106
+PASS English content 106
+PASS English content 106
+PASS English content 106
+PASS English content 107
+PASS English content 107
+PASS English content 107
+PASS English content 107
+PASS English content 107
+PASS English content 108
+PASS English content 108
+PASS English content 108
+PASS English content 108
+PASS English content 108
+PASS English content 109
+PASS English content 109
+PASS English content 109
+PASS English content 109
+PASS English content 109
+PASS English content 110
+PASS English content 110
+PASS English content 110
+PASS English content 110
+PASS English content 110
+PASS English content 111
+PASS English content 111
+PASS English content 111
+PASS English content 111
+PASS English content 111
+PASS English content 112
+PASS English content 112
+PASS English content 112
+PASS English content 112
+PASS English content 112
+PASS English content 113
+PASS English content 113
+PASS English content 113
+PASS English content 113
+PASS English content 113
+PASS English content 114
+PASS English content 114
+PASS English content 114
+PASS English content 114
+PASS English content 114
+PASS English content 115
+PASS English content 115
+PASS English content 115
+PASS English content 115
+PASS English content 115
+PASS English content 116
+PASS English content 116
+PASS English content 116
+PASS English content 116
+PASS English content 116
+PASS English content 117
+PASS English content 117
+PASS English content 117
+PASS English content 117
+PASS English content 117
+PASS English content 118
+PASS English content 118
+PASS English content 118
+PASS English content 118
+PASS English content 118
+PASS English content 119
+PASS English content 119
+PASS English content 119
+PASS English content 119
+PASS English content 119
+PASS English content 120
+PASS English content 120
+PASS English content 120
+PASS English content 120
+PASS English content 120
+PASS English content 121
+PASS English content 121
+PASS English content 121
+PASS English content 121
+PASS English content 121
+PASS English content 122
+PASS English content 122
+PASS English content 122
+PASS English content 122
+PASS English content 122
+PASS English content 123
+PASS English content 123
+PASS English content 123
+PASS English content 123
+PASS English content 123
+PASS English content 124
+PASS English content 124
+PASS English content 124
+PASS English content 124
+PASS English content 124
+PASS English content 125
+PASS English content 125
+PASS English content 125
+PASS English content 125
+PASS English content 125
+PASS English content 126
+PASS English content 126
+PASS English content 126
+PASS English content 126
+PASS English content 126
+PASS English content 127
+PASS English content 127
+PASS English content 127
+PASS English content 127
+PASS English content 127
+PASS English content 128
+PASS English content 128
+PASS English content 128
+PASS English content 128
+PASS English content 128
+PASS English content 129
+PASS English content 129
+PASS English content 129
+PASS English content 129
+PASS English content 129
+PASS English content 130
+PASS English content 130
+PASS English content 130
+PASS English content 130
+PASS English content 130
+PASS English content 131
+PASS English content 131
+PASS English content 131
+PASS English content 131
+PASS English content 131
+PASS English content 132
+PASS English content 132
+PASS English content 132
+PASS English content 132
+PASS English content 132
+PASS English content 133
+PASS English content 133
+PASS English content 133
+PASS English content 133
+PASS English content 133
+PASS English content 134
+PASS English content 134
+PASS English content 134
+PASS English content 134
+PASS English content 134
+PASS English content 135
+PASS English content 135
+PASS English content 135
+PASS English content 135
+PASS English content 135
+PASS English content 136
+PASS English content 136
+PASS English content 136
+PASS English content 136
+PASS English content 136
+PASS English content 137
+PASS English content 137
+PASS English content 137
+PASS English content 137
+PASS English content 137
+PASS English content 138
+PASS English content 138
+PASS English content 138
+PASS English content 138
+PASS English content 138
+PASS English content 139
+PASS English content 139
+PASS English content 139
+PASS English content 139
+PASS English content 139
+PASS English content 140
+PASS English content 140
+PASS English content 140
+PASS English content 140
+PASS English content 140
+PASS English content 141
+PASS English content 141
+PASS English content 141
+PASS English content 141
+PASS English content 141
+PASS English content 142
+PASS English content 142
+PASS English content 142
+PASS English content 142
+PASS English content 142
+PASS English content 143
+PASS English content 143
+PASS English content 143
+PASS English content 143
+PASS English content 143
+PASS English content 144
+PASS English content 144
+PASS English content 144
+PASS English content 144
+PASS English content 144
+PASS English content 145
+PASS English content 145
+PASS English content 145
+PASS English content 145
+PASS English content 145
+PASS English content 146
+PASS English content 146
+PASS English content 146
+PASS English content 146
+PASS English content 146
+PASS English content 147
+PASS English content 147
+PASS English content 147
+PASS English content 147
+PASS English content 147
+PASS English content 148
+PASS English content 148
+PASS English content 148
+PASS English content 148
+PASS English content 148
+PASS English content 149
+PASS English content 149
+PASS English content 149
+PASS English content 149
+PASS English content 149
+PASS English content 150
+PASS English content 150
+PASS English content 150
+PASS English content 150
+PASS English content 150
+PASS Dark level 1 unchanged Number
+PASS Dark level 1 unchanged Seconds
+PASS Dark level 1 unchanged Learning
+PASS Dark problem 1 unchanged Id
+PASS Dark problem 1 unchanged Title
+PASS Dark problem 1 unchanged Category
+PASS Dark problem 1 unchanged Statement
+PASS Dark problem 1 unchanged Hint
+PASS Dark problem 1 unchanged Reference
+PASS Dark level 2 unchanged Number
+PASS Dark level 2 unchanged Seconds
+PASS Dark level 2 unchanged Learning
+PASS Dark problem 2 unchanged Id
+PASS Dark problem 2 unchanged Title
+PASS Dark problem 2 unchanged Category
+PASS Dark problem 2 unchanged Statement
+PASS Dark problem 2 unchanged Hint
+PASS Dark problem 2 unchanged Reference
+PASS Dark level 3 unchanged Number
+PASS Dark level 3 unchanged Seconds
+PASS Dark level 3 unchanged Learning
+PASS Dark problem 3 unchanged Id
+PASS Dark problem 3 unchanged Title
+PASS Dark problem 3 unchanged Category
+PASS Dark problem 3 unchanged Statement
+PASS Dark problem 3 unchanged Hint
+PASS Dark problem 3 unchanged Reference
+PASS Dark level 4 unchanged Number
+PASS Dark level 4 unchanged Seconds
+PASS Dark level 4 unchanged Learning
+PASS Dark problem 4 unchanged Id
+PASS Dark problem 4 unchanged Title
+PASS Dark problem 4 unchanged Category
+PASS Dark problem 4 unchanged Statement
+PASS Dark problem 4 unchanged Hint
+PASS Dark problem 4 unchanged Reference
+PASS Dark level 5 unchanged Number
+PASS Dark level 5 unchanged Seconds
+PASS Dark level 5 unchanged Learning
+PASS Dark problem 5 unchanged Id
+PASS Dark problem 5 unchanged Title
+PASS Dark problem 5 unchanged Category
+PASS Dark problem 5 unchanged Statement
+PASS Dark problem 5 unchanged Hint
+PASS Dark problem 5 unchanged Reference
+PASS Dark level 6 unchanged Number
+PASS Dark level 6 unchanged Seconds
+PASS Dark level 6 unchanged Learning
+PASS Dark problem 6 unchanged Id
+PASS Dark problem 6 unchanged Title
+PASS Dark problem 6 unchanged Category
+PASS Dark problem 6 unchanged Statement
+PASS Dark problem 6 unchanged Hint
+PASS Dark problem 6 unchanged Reference
+PASS Dark level 7 unchanged Number
+PASS Dark level 7 unchanged Seconds
+PASS Dark level 7 unchanged Learning
+PASS Dark problem 7 unchanged Id
+PASS Dark problem 7 unchanged Title
+PASS Dark problem 7 unchanged Category
+PASS Dark problem 7 unchanged Statement
+PASS Dark problem 7 unchanged Hint
+PASS Dark problem 7 unchanged Reference
+PASS Dark level 8 unchanged Number
+PASS Dark level 8 unchanged Seconds
+PASS Dark level 8 unchanged Learning
+PASS Dark problem 8 unchanged Id
+PASS Dark problem 8 unchanged Title
+PASS Dark problem 8 unchanged Category
+PASS Dark problem 8 unchanged Statement
+PASS Dark problem 8 unchanged Hint
+PASS Dark problem 8 unchanged Reference
+PASS Dark level 9 unchanged Number
+PASS Dark level 9 unchanged Seconds
+PASS Dark level 9 unchanged Learning
+PASS Dark problem 9 unchanged Id
+PASS Dark problem 9 unchanged Title
+PASS Dark problem 9 unchanged Category
+PASS Dark problem 9 unchanged Statement
+PASS Dark problem 9 unchanged Hint
+PASS Dark problem 9 unchanged Reference
+PASS Dark level 10 unchanged Number
+PASS Dark level 10 unchanged Seconds
+PASS Dark level 10 unchanged Learning
+PASS Dark problem 10 unchanged Id
+PASS Dark problem 10 unchanged Title
+PASS Dark problem 10 unchanged Category
+PASS Dark problem 10 unchanged Statement
+PASS Dark problem 10 unchanged Hint
+PASS Dark problem 10 unchanged Reference
+PASS Dark level 11 unchanged Number
+PASS Dark level 11 unchanged Seconds
+PASS Dark level 11 unchanged Learning
+PASS Dark problem 11 unchanged Id
+PASS Dark problem 11 unchanged Title
+PASS Dark problem 11 unchanged Category
+PASS Dark problem 11 unchanged Statement
+PASS Dark problem 11 unchanged Hint
+PASS Dark problem 11 unchanged Reference
+PASS Dark level 12 unchanged Number
+PASS Dark level 12 unchanged Seconds
+PASS Dark level 12 unchanged Learning
+PASS Dark problem 12 unchanged Id
+PASS Dark problem 12 unchanged Title
+PASS Dark problem 12 unchanged Category
+PASS Dark problem 12 unchanged Statement
+PASS Dark problem 12 unchanged Hint
+PASS Dark problem 12 unchanged Reference
+PASS Dark level 13 unchanged Number
+PASS Dark level 13 unchanged Seconds
+PASS Dark level 13 unchanged Learning
+PASS Dark problem 13 unchanged Id
+PASS Dark problem 13 unchanged Title
+PASS Dark problem 13 unchanged Category
+PASS Dark problem 13 unchanged Statement
+PASS Dark problem 13 unchanged Hint
+PASS Dark problem 13 unchanged Reference
+PASS Dark level 14 unchanged Number
+PASS Dark level 14 unchanged Seconds
+PASS Dark level 14 unchanged Learning
+PASS Dark problem 14 unchanged Id
+PASS Dark problem 14 unchanged Title
+PASS Dark problem 14 unchanged Category
+PASS Dark problem 14 unchanged Statement
+PASS Dark problem 14 unchanged Hint
+PASS Dark problem 14 unchanged Reference
+PASS Dark level 15 unchanged Number
+PASS Dark level 15 unchanged Seconds
+PASS Dark level 15 unchanged Learning
+PASS Dark problem 15 unchanged Id
+PASS Dark problem 15 unchanged Title
+PASS Dark problem 15 unchanged Category
+PASS Dark problem 15 unchanged Statement
+PASS Dark problem 15 unchanged Hint
+PASS Dark problem 15 unchanged Reference
+PASS Dark level 16 unchanged Number
+PASS Dark level 16 unchanged Seconds
+PASS Dark level 16 unchanged Learning
+PASS Dark problem 16 unchanged Id
+PASS Dark problem 16 unchanged Title
+PASS Dark problem 16 unchanged Category
+PASS Dark problem 16 unchanged Statement
+PASS Dark problem 16 unchanged Hint
+PASS Dark problem 16 unchanged Reference
+PASS Dark level 17 unchanged Number
+PASS Dark level 17 unchanged Seconds
+PASS Dark level 17 unchanged Learning
+PASS Dark problem 17 unchanged Id
+PASS Dark problem 17 unchanged Title
+PASS Dark problem 17 unchanged Category
+PASS Dark problem 17 unchanged Statement
+PASS Dark problem 17 unchanged Hint
+PASS Dark problem 17 unchanged Reference
+PASS Dark level 18 unchanged Number
+PASS Dark level 18 unchanged Seconds
+PASS Dark level 18 unchanged Learning
+PASS Dark problem 18 unchanged Id
+PASS Dark problem 18 unchanged Title
+PASS Dark problem 18 unchanged Category
+PASS Dark problem 18 unchanged Statement
+PASS Dark problem 18 unchanged Hint
+PASS Dark problem 18 unchanged Reference
+PASS Dark level 19 unchanged Number
+PASS Dark level 19 unchanged Seconds
+PASS Dark level 19 unchanged Learning
+PASS Dark problem 19 unchanged Id
+PASS Dark problem 19 unchanged Title
+PASS Dark problem 19 unchanged Category
+PASS Dark problem 19 unchanged Statement
+PASS Dark problem 19 unchanged Hint
+PASS Dark problem 19 unchanged Reference
+PASS Dark level 20 unchanged Number
+PASS Dark level 20 unchanged Seconds
+PASS Dark level 20 unchanged Learning
+PASS Dark problem 20 unchanged Id
+PASS Dark problem 20 unchanged Title
+PASS Dark problem 20 unchanged Category
+PASS Dark problem 20 unchanged Statement
+PASS Dark problem 20 unchanged Hint
+PASS Dark problem 20 unchanged Reference
+PASS Dark level 21 unchanged Number
+PASS Dark level 21 unchanged Seconds
+PASS Dark level 21 unchanged Learning
+PASS Dark problem 21 unchanged Id
+PASS Dark problem 21 unchanged Title
+PASS Dark problem 21 unchanged Category
+PASS Dark problem 21 unchanged Statement
+PASS Dark problem 21 unchanged Hint
+PASS Dark problem 21 unchanged Reference
+PASS Dark level 22 unchanged Number
+PASS Dark level 22 unchanged Seconds
+PASS Dark level 22 unchanged Learning
+PASS Dark problem 22 unchanged Id
+PASS Dark problem 22 unchanged Title
+PASS Dark problem 22 unchanged Category
+PASS Dark problem 22 unchanged Statement
+PASS Dark problem 22 unchanged Hint
+PASS Dark problem 22 unchanged Reference
+PASS Dark level 23 unchanged Number
+PASS Dark level 23 unchanged Seconds
+PASS Dark level 23 unchanged Learning
+PASS Dark problem 23 unchanged Id
+PASS Dark problem 23 unchanged Title
+PASS Dark problem 23 unchanged Category
+PASS Dark problem 23 unchanged Statement
+PASS Dark problem 23 unchanged Hint
+PASS Dark problem 23 unchanged Reference
+PASS Dark level 24 unchanged Number
+PASS Dark level 24 unchanged Seconds
+PASS Dark level 24 unchanged Learning
+PASS Dark problem 24 unchanged Id
+PASS Dark problem 24 unchanged Title
+PASS Dark problem 24 unchanged Category
+PASS Dark problem 24 unchanged Statement
+PASS Dark problem 24 unchanged Hint
+PASS Dark problem 24 unchanged Reference
+PASS Dark level 25 unchanged Number
+PASS Dark level 25 unchanged Seconds
+PASS Dark level 25 unchanged Learning
+PASS Dark problem 25 unchanged Id
+PASS Dark problem 25 unchanged Title
+PASS Dark problem 25 unchanged Category
+PASS Dark problem 25 unchanged Statement
+PASS Dark problem 25 unchanged Hint
+PASS Dark problem 25 unchanged Reference
+PASS Dark level 26 unchanged Number
+PASS Dark level 26 unchanged Seconds
+PASS Dark level 26 unchanged Learning
+PASS Dark problem 26 unchanged Id
+PASS Dark problem 26 unchanged Title
+PASS Dark problem 26 unchanged Category
+PASS Dark problem 26 unchanged Statement
+PASS Dark problem 26 unchanged Hint
+PASS Dark problem 26 unchanged Reference
+PASS Dark level 27 unchanged Number
+PASS Dark level 27 unchanged Seconds
+PASS Dark level 27 unchanged Learning
+PASS Dark problem 27 unchanged Id
+PASS Dark problem 27 unchanged Title
+PASS Dark problem 27 unchanged Category
+PASS Dark problem 27 unchanged Statement
+PASS Dark problem 27 unchanged Hint
+PASS Dark problem 27 unchanged Reference
+PASS Dark level 28 unchanged Number
+PASS Dark level 28 unchanged Seconds
+PASS Dark level 28 unchanged Learning
+PASS Dark problem 28 unchanged Id
+PASS Dark problem 28 unchanged Title
+PASS Dark problem 28 unchanged Category
+PASS Dark problem 28 unchanged Statement
+PASS Dark problem 28 unchanged Hint
+PASS Dark problem 28 unchanged Reference
+PASS Dark level 29 unchanged Number
+PASS Dark level 29 unchanged Seconds
+PASS Dark level 29 unchanged Learning
+PASS Dark problem 29 unchanged Id
+PASS Dark problem 29 unchanged Title
+PASS Dark problem 29 unchanged Category
+PASS Dark problem 29 unchanged Statement
+PASS Dark problem 29 unchanged Hint
+PASS Dark problem 29 unchanged Reference
+PASS Dark level 30 unchanged Number
+PASS Dark level 30 unchanged Seconds
+PASS Dark level 30 unchanged Learning
+PASS Dark problem 30 unchanged Id
+PASS Dark problem 30 unchanged Title
+PASS Dark problem 30 unchanged Category
+PASS Dark problem 30 unchanged Statement
+PASS Dark problem 30 unchanged Hint
+PASS Dark problem 30 unchanged Reference
+PASS Dark level 31 unchanged Number
+PASS Dark level 31 unchanged Seconds
+PASS Dark level 31 unchanged Learning
+PASS Dark problem 31 unchanged Id
+PASS Dark problem 31 unchanged Title
+PASS Dark problem 31 unchanged Category
+PASS Dark problem 31 unchanged Statement
+PASS Dark problem 31 unchanged Hint
+PASS Dark problem 31 unchanged Reference
+PASS Dark level 32 unchanged Number
+PASS Dark level 32 unchanged Seconds
+PASS Dark level 32 unchanged Learning
+PASS Dark problem 32 unchanged Id
+PASS Dark problem 32 unchanged Title
+PASS Dark problem 32 unchanged Category
+PASS Dark problem 32 unchanged Statement
+PASS Dark problem 32 unchanged Hint
+PASS Dark problem 32 unchanged Reference
+PASS Dark level 33 unchanged Number
+PASS Dark level 33 unchanged Seconds
+PASS Dark level 33 unchanged Learning
+PASS Dark problem 33 unchanged Id
+PASS Dark problem 33 unchanged Title
+PASS Dark problem 33 unchanged Category
+PASS Dark problem 33 unchanged Statement
+PASS Dark problem 33 unchanged Hint
+PASS Dark problem 33 unchanged Reference
+PASS Dark level 34 unchanged Number
+PASS Dark level 34 unchanged Seconds
+PASS Dark level 34 unchanged Learning
+PASS Dark problem 34 unchanged Id
+PASS Dark problem 34 unchanged Title
+PASS Dark problem 34 unchanged Category
+PASS Dark problem 34 unchanged Statement
+PASS Dark problem 34 unchanged Hint
+PASS Dark problem 34 unchanged Reference
+PASS Dark level 35 unchanged Number
+PASS Dark level 35 unchanged Seconds
+PASS Dark level 35 unchanged Learning
+PASS Dark problem 35 unchanged Id
+PASS Dark problem 35 unchanged Title
+PASS Dark problem 35 unchanged Category
+PASS Dark problem 35 unchanged Statement
+PASS Dark problem 35 unchanged Hint
+PASS Dark problem 35 unchanged Reference
+PASS Dark level 36 unchanged Number
+PASS Dark level 36 unchanged Seconds
+PASS Dark level 36 unchanged Learning
+PASS Dark problem 36 unchanged Id
+PASS Dark problem 36 unchanged Title
+PASS Dark problem 36 unchanged Category
+PASS Dark problem 36 unchanged Statement
+PASS Dark problem 36 unchanged Hint
+PASS Dark problem 36 unchanged Reference
+PASS Dark level 37 unchanged Number
+PASS Dark level 37 unchanged Seconds
+PASS Dark level 37 unchanged Learning
+PASS Dark problem 37 unchanged Id
+PASS Dark problem 37 unchanged Title
+PASS Dark problem 37 unchanged Category
+PASS Dark problem 37 unchanged Statement
+PASS Dark problem 37 unchanged Hint
+PASS Dark problem 37 unchanged Reference
+PASS Dark level 38 unchanged Number
+PASS Dark level 38 unchanged Seconds
+PASS Dark level 38 unchanged Learning
+PASS Dark problem 38 unchanged Id
+PASS Dark problem 38 unchanged Title
+PASS Dark problem 38 unchanged Category
+PASS Dark problem 38 unchanged Statement
+PASS Dark problem 38 unchanged Hint
+PASS Dark problem 38 unchanged Reference
+PASS Dark level 39 unchanged Number
+PASS Dark level 39 unchanged Seconds
+PASS Dark level 39 unchanged Learning
+PASS Dark problem 39 unchanged Id
+PASS Dark problem 39 unchanged Title
+PASS Dark problem 39 unchanged Category
+PASS Dark problem 39 unchanged Statement
+PASS Dark problem 39 unchanged Hint
+PASS Dark problem 39 unchanged Reference
+PASS Dark level 40 unchanged Number
+PASS Dark level 40 unchanged Seconds
+PASS Dark level 40 unchanged Learning
+PASS Dark problem 40 unchanged Id
+PASS Dark problem 40 unchanged Title
+PASS Dark problem 40 unchanged Category
+PASS Dark problem 40 unchanged Statement
+PASS Dark problem 40 unchanged Hint
+PASS Dark problem 40 unchanged Reference
+PASS Dark level 41 unchanged Number
+PASS Dark level 41 unchanged Seconds
+PASS Dark level 41 unchanged Learning
+PASS Dark problem 41 unchanged Id
+PASS Dark problem 41 unchanged Title
+PASS Dark problem 41 unchanged Category
+PASS Dark problem 41 unchanged Statement
+PASS Dark problem 41 unchanged Hint
+PASS Dark problem 41 unchanged Reference
+PASS Dark level 42 unchanged Number
+PASS Dark level 42 unchanged Seconds
+PASS Dark level 42 unchanged Learning
+PASS Dark problem 42 unchanged Id
+PASS Dark problem 42 unchanged Title
+PASS Dark problem 42 unchanged Category
+PASS Dark problem 42 unchanged Statement
+PASS Dark problem 42 unchanged Hint
+PASS Dark problem 42 unchanged Reference
+PASS Dark level 43 unchanged Number
+PASS Dark level 43 unchanged Seconds
+PASS Dark level 43 unchanged Learning
+PASS Dark problem 43 unchanged Id
+PASS Dark problem 43 unchanged Title
+PASS Dark problem 43 unchanged Category
+PASS Dark problem 43 unchanged Statement
+PASS Dark problem 43 unchanged Hint
+PASS Dark problem 43 unchanged Reference
+PASS Dark level 44 unchanged Number
+PASS Dark level 44 unchanged Seconds
+PASS Dark level 44 unchanged Learning
+PASS Dark problem 44 unchanged Id
+PASS Dark problem 44 unchanged Title
+PASS Dark problem 44 unchanged Category
+PASS Dark problem 44 unchanged Statement
+PASS Dark problem 44 unchanged Hint
+PASS Dark problem 44 unchanged Reference
+PASS Dark level 45 unchanged Number
+PASS Dark level 45 unchanged Seconds
+PASS Dark level 45 unchanged Learning
+PASS Dark problem 45 unchanged Id
+PASS Dark problem 45 unchanged Title
+PASS Dark problem 45 unchanged Category
+PASS Dark problem 45 unchanged Statement
+PASS Dark problem 45 unchanged Hint
+PASS Dark problem 45 unchanged Reference
+PASS Dark level 46 unchanged Number
+PASS Dark level 46 unchanged Seconds
+PASS Dark level 46 unchanged Learning
+PASS Dark problem 46 unchanged Id
+PASS Dark problem 46 unchanged Title
+PASS Dark problem 46 unchanged Category
+PASS Dark problem 46 unchanged Statement
+PASS Dark problem 46 unchanged Hint
+PASS Dark problem 46 unchanged Reference
+PASS Dark level 47 unchanged Number
+PASS Dark level 47 unchanged Seconds
+PASS Dark level 47 unchanged Learning
+PASS Dark problem 47 unchanged Id
+PASS Dark problem 47 unchanged Title
+PASS Dark problem 47 unchanged Category
+PASS Dark problem 47 unchanged Statement
+PASS Dark problem 47 unchanged Hint
+PASS Dark problem 47 unchanged Reference
+PASS Dark level 48 unchanged Number
+PASS Dark level 48 unchanged Seconds
+PASS Dark level 48 unchanged Learning
+PASS Dark problem 48 unchanged Id
+PASS Dark problem 48 unchanged Title
+PASS Dark problem 48 unchanged Category
+PASS Dark problem 48 unchanged Statement
+PASS Dark problem 48 unchanged Hint
+PASS Dark problem 48 unchanged Reference
+PASS Dark level 49 unchanged Number
+PASS Dark level 49 unchanged Seconds
+PASS Dark level 49 unchanged Learning
+PASS Dark problem 49 unchanged Id
+PASS Dark problem 49 unchanged Title
+PASS Dark problem 49 unchanged Category
+PASS Dark problem 49 unchanged Statement
+PASS Dark problem 49 unchanged Hint
+PASS Dark problem 49 unchanged Reference
+PASS Dark level 50 unchanged Number
+PASS Dark level 50 unchanged Seconds
+PASS Dark level 50 unchanged Learning
+PASS Dark problem 50 unchanged Id
+PASS Dark problem 50 unchanged Title
+PASS Dark problem 50 unchanged Category
+PASS Dark problem 50 unchanged Statement
+PASS Dark problem 50 unchanged Hint
+PASS Dark problem 50 unchanged Reference
+PASS Judge 1 seed 20261102 score 100
+PASS Judge 2 seed 20261102 score 100
+PASS Judge 3 seed 20261102 score 100
+PASS Judge 201 seed 20261102 score 100
+PASS Judge 201 seed 424242 score 100
+PASS Judge 205 seed 20261102 score 100
+PASS Judge 205 seed 424242 score 100
+PASS Judge 4 seed 20261102 score 100
+PASS Judge 202 seed 20261102 score 100
+PASS Judge 202 seed 424242 score 100
+PASS Judge 210 seed 20261102 score 100
+PASS Judge 210 seed 424242 score 100
+PASS Judge 5 seed 20261102 score 100
+PASS Judge 6 seed 20261102 score 100
+PASS Judge 7 seed 20261102 score 100
+PASS Judge 10 seed 20261102 score 100
+PASS Judge 212 seed 20261102 score 100
+PASS Judge 212 seed 424242 score 100
+PASS Judge 213 seed 20261102 score 100
+PASS Judge 213 seed 424242 score 100
+PASS Judge 8 seed 20261102 score 100
+PASS Judge 11 seed 20261102 score 100
+PASS Judge 12 seed 20261102 score 100
+PASS Judge 214 seed 20261102 score 100
+PASS Judge 214 seed 424242 score 100
+PASS Judge 9 seed 20261102 score 100
+PASS Judge 215 seed 20261102 score 100
+PASS Judge 215 seed 424242 score 100
+PASS Judge 13 seed 20261102 score 100
+PASS Judge 14 seed 20261102 score 100
+PASS Judge 208 seed 20261102 score 100
+PASS Judge 208 seed 424242 score 100
+PASS Judge 203 seed 20261102 score 100
+PASS Judge 203 seed 424242 score 100
+PASS Judge 211 seed 20261102 score 100
+PASS Judge 211 seed 424242 score 100
+PASS Judge 204 seed 20261102 score 100
+PASS Judge 204 seed 424242 score 100
+PASS Judge 209 seed 20261102 score 100
+PASS Judge 209 seed 424242 score 100
+PASS Judge 207 seed 20261102 score 100
+PASS Judge 207 seed 424242 score 100
+PASS Judge 16 seed 20261102 score 100
+PASS Judge 18 seed 20261102 score 100
+PASS Judge 15 seed 20261102 score 100
+PASS Judge 20 seed 20261102 score 100
+PASS Judge 17 seed 20261102 score 100
+PASS Judge 19 seed 20261102 score 100
+PASS Judge 206 seed 20261102 score 100
+PASS Judge 206 seed 424242 score 100
+PASS Judge 21 seed 20261102 score 100
+PASS Judge 32 seed 20261102 score 100
+PASS Judge 33 seed 20261102 score 100
+PASS Judge 37 seed 20261102 score 100
+PASS Judge 22 seed 20261102 score 100
+PASS Judge 29 seed 20261102 score 100
+PASS Judge 23 seed 20261102 score 100
+PASS Judge 24 seed 20261102 score 100
+PASS Judge 30 seed 20261102 score 100
+PASS Judge 25 seed 20261102 score 100
+PASS Judge 40 seed 20261102 score 100
+PASS Judge 39 seed 20261102 score 100
+PASS Judge 26 seed 20261102 score 100
+PASS Judge 31 seed 20261102 score 100
+PASS Judge 36 seed 20261102 score 100
+PASS Judge 34 seed 20261102 score 100
+PASS Judge 35 seed 20261102 score 100
+PASS Judge 27 seed 20261102 score 100
+PASS Judge 28 seed 20261102 score 100
+PASS Judge 41 seed 20261102 score 100
+PASS Judge 42 seed 20261102 score 100
+PASS Judge 43 seed 20261102 score 100
+PASS Judge 216 seed 20261102 score 100
+PASS Judge 216 seed 424242 score 100
+PASS Judge 217 seed 20261102 score 100
+PASS Judge 217 seed 424242 score 100
+PASS Judge 218 seed 20261102 score 100
+PASS Judge 218 seed 424242 score 100
+PASS Judge 44 seed 20261102 score 100
+PASS Judge 46 seed 20261102 score 100
+PASS Judge 47 seed 20261102 score 100
+PASS Judge 224 seed 20261102 score 100
+PASS Judge 224 seed 424242 score 100
+PASS Judge 231 seed 20261102 score 100
+PASS Judge 231 seed 424242 score 100
+PASS Judge 222 seed 20261102 score 100
+PASS Judge 222 seed 424242 score 100
+PASS Judge 225 seed 20261102 score 100
+PASS Judge 225 seed 424242 score 100
+PASS Judge 229 seed 20261102 score 100
+PASS Judge 229 seed 424242 score 100
+PASS Judge 230 seed 20261102 score 100
+PASS Judge 230 seed 424242 score 100
+PASS Judge 223 seed 20261102 score 100
+PASS Judge 223 seed 424242 score 100
+PASS Judge 219 seed 20261102 score 100
+PASS Judge 219 seed 424242 score 100
+PASS Judge 220 seed 20261102 score 100
+PASS Judge 220 seed 424242 score 100
+PASS Judge 221 seed 20261102 score 100
+PASS Judge 221 seed 424242 score 100
+PASS Judge 233 seed 20261102 score 100
+PASS Judge 233 seed 424242 score 100
+PASS Judge 226 seed 20261102 score 100
+PASS Judge 226 seed 424242 score 100
+PASS Judge 227 seed 20261102 score 100
+PASS Judge 227 seed 424242 score 100
+PASS Judge 228 seed 20261102 score 100
+PASS Judge 228 seed 424242 score 100
+PASS Judge 232 seed 20261102 score 100
+PASS Judge 232 seed 424242 score 100
+PASS Judge 235 seed 20261102 score 100
+PASS Judge 235 seed 424242 score 100
+PASS Judge 234 seed 20261102 score 100
+PASS Judge 234 seed 424242 score 100
+PASS Judge 45 seed 20261102 score 100
+PASS Judge 48 seed 20261102 score 100
+PASS Judge 49 seed 20261102 score 100
+PASS Judge 50 seed 20261102 score 100
+PASS Judge 38 seed 20261102 score 100
+PASS Judge 51 seed 20261102 score 100
+PASS Judge 55 seed 20261102 score 100
+PASS Judge 59 seed 20261102 score 100
+PASS Judge 56 seed 20261102 score 100
+PASS Judge 58 seed 20261102 score 100
+PASS Judge 53 seed 20261102 score 100
+PASS Judge 255 seed 20261102 score 100
+PASS Judge 255 seed 424242 score 100
+PASS Judge 246 seed 20261102 score 100
+PASS Judge 246 seed 424242 score 100
+PASS Judge 247 seed 20261102 score 100
+PASS Judge 247 seed 424242 score 100
+PASS Judge 250 seed 20261102 score 100
+PASS Judge 250 seed 424242 score 100
+PASS Judge 251 seed 20261102 score 100
+PASS Judge 251 seed 424242 score 100
+PASS Judge 248 seed 20261102 score 100
+PASS Judge 248 seed 424242 score 100
+PASS Judge 252 seed 20261102 score 100
+PASS Judge 252 seed 424242 score 100
+PASS Judge 249 seed 20261102 score 100
+PASS Judge 249 seed 424242 score 100
+PASS Judge 253 seed 20261102 score 100
+PASS Judge 253 seed 424242 score 100
+PASS Judge 254 seed 20261102 score 100
+PASS Judge 254 seed 424242 score 100
+PASS Judge 57 seed 20261102 score 100
+PASS Judge 52 seed 20261102 score 100
+PASS Judge 54 seed 20261102 score 100
+PASS Judge 77 seed 20261102 score 100
+PASS Judge 243 seed 20261102 score 100
+PASS Judge 243 seed 424242 score 100
+PASS Judge 60 seed 20261102 score 100
+PASS Judge 238 seed 20261102 score 100
+PASS Judge 238 seed 424242 score 100
+PASS Judge 236 seed 20261102 score 100
+PASS Judge 236 seed 424242 score 100
+PASS Judge 237 seed 20261102 score 100
+PASS Judge 237 seed 424242 score 100
+PASS Judge 239 seed 20261102 score 100
+PASS Judge 239 seed 424242 score 100
+PASS Judge 240 seed 20261102 score 100
+PASS Judge 240 seed 424242 score 100
+PASS Judge 241 seed 20261102 score 100
+PASS Judge 241 seed 424242 score 100
+PASS Judge 242 seed 20261102 score 100
+PASS Judge 242 seed 424242 score 100
+PASS Judge 244 seed 20261102 score 100
+PASS Judge 244 seed 424242 score 100
+PASS Judge 245 seed 20261102 score 100
+PASS Judge 245 seed 424242 score 100
+PASS Judge 73 seed 20261102 score 100
+PASS Judge 75 seed 20261102 score 100
+PASS Judge 74 seed 20261102 score 100
+PASS Judge 63 seed 20261102 score 100
+PASS Judge 64 seed 20261102 score 100
+PASS Judge 61 seed 20261102 score 100
+PASS Judge 62 seed 20261102 score 100
+PASS Judge 67 seed 20261102 score 100
+PASS Judge 68 seed 20261102 score 100
+PASS Judge 69 seed 20261102 score 100
+PASS Judge 65 seed 20261102 score 100
+PASS Judge 66 seed 20261102 score 100
+PASS Judge 72 seed 20261102 score 100
+PASS Judge 71 seed 20261102 score 100
+PASS Judge 70 seed 20261102 score 100
+PASS Judge 76 seed 20261102 score 100
+PASS Judge 79 seed 20261102 score 100
+PASS Judge 80 seed 20261102 score 100
+PASS Judge 260 seed 20261102 score 100
+PASS Judge 260 seed 424242 score 100
+PASS Judge 259 seed 20261102 score 100
+PASS Judge 259 seed 424242 score 100
+PASS Judge 258 seed 20261102 score 100
+PASS Judge 258 seed 424242 score 100
+PASS Judge 256 seed 20261102 score 100
+PASS Judge 256 seed 424242 score 100
+PASS Judge 257 seed 20261102 score 100
+PASS Judge 257 seed 424242 score 100
+PASS Judge 82 seed 20261102 score 100
+PASS Judge 83 seed 20261102 score 100
+PASS Judge 78 seed 20261102 score 100
+PASS Judge 81 seed 20261102 score 100
+PASS Judge 84 seed 20261102 score 100
+PASS Judge 85 seed 20261102 score 100
+PASS Judge 86 seed 20261102 score 100
+PASS Judge 87 seed 20261102 score 100
+PASS Judge 88 seed 20261102 score 100
+PASS Judge 89 seed 20261102 score 100
+PASS Judge 90 seed 20261102 score 100
+PASS Judge 101 seed 20261102 score 100
+PASS Judge 102 seed 20261102 score 100
+PASS Judge 103 seed 20261102 score 100
+PASS Judge 104 seed 20261102 score 100
+PASS Judge 105 seed 20261102 score 100
+PASS Judge 106 seed 20261102 score 100
+PASS Judge 107 seed 20261102 score 100
+PASS Judge 108 seed 20261102 score 100
+PASS Judge 109 seed 20261102 score 100
+PASS Judge 110 seed 20261102 score 100
+PASS Judge 111 seed 20261102 score 100
+PASS Judge 112 seed 20261102 score 100
+PASS Judge 113 seed 20261102 score 100
+PASS Judge 114 seed 20261102 score 100
+PASS Judge 115 seed 20261102 score 100
+PASS Judge 116 seed 20261102 score 100
+PASS Judge 117 seed 20261102 score 100
+PASS Judge 118 seed 20261102 score 100
+PASS Judge 119 seed 20261102 score 100
+PASS Judge 120 seed 20261102 score 100
+PASS Judge 121 seed 20261102 score 100
+PASS Judge 122 seed 20261102 score 100
+PASS Judge 123 seed 20261102 score 100
+PASS Judge 124 seed 20261102 score 100
+PASS Judge 125 seed 20261102 score 100
+PASS Judge 126 seed 20261102 score 100
+PASS Judge 127 seed 20261102 score 100
+PASS Judge 128 seed 20261102 score 100
+PASS Judge 129 seed 20261102 score 100
+PASS Judge 130 seed 20261102 score 100
+PASS Judge 131 seed 20261102 score 100
+PASS Judge 132 seed 20261102 score 100
+PASS Judge 133 seed 20261102 score 100
+PASS Judge 134 seed 20261102 score 100
+PASS Judge 135 seed 20261102 score 100
+PASS Judge 136 seed 20261102 score 100
+PASS Judge 137 seed 20261102 score 100
+PASS Judge 138 seed 20261102 score 100
+PASS Judge 139 seed 20261102 score 100
+PASS Judge 140 seed 20261102 score 100
+PASS Judge 141 seed 20261102 score 100
+PASS Judge 142 seed 20261102 score 100
+PASS Judge 143 seed 20261102 score 100
+PASS Judge 144 seed 20261102 score 100
+PASS Judge 145 seed 20261102 score 100
+PASS Judge 146 seed 20261102 score 100
+PASS Judge 147 seed 20261102 score 100
+PASS Judge 148 seed 20261102 score 100
+PASS Judge 149 seed 20261102 score 100
+PASS Judge 150 seed 20261102 score 100
+PASS Cases passed: 7280
+PASS Leading-zero identifiers compared as text
+ALL VER1.3.1 CHECKS PASSED
