@@ -8,13 +8,11 @@
 
 ## 下载与更新
 
-- [下载 ver1.3.1 独立 EXE](https://github.com/relsx/feng-c-practice/blob/main/releases/ver1.3.1/Feng_C_Practice_ver1.3.1.exe?raw=true)
-- [完整发布包：EXE、源码与文档](https://github.com/relsx/feng-c-practice/blob/main/releases/ver1.3.1/Feng_C_Practice_ver1.3.1_full.zip?raw=true)
-- [SHA-256 校验文件](releases/ver1.3.1/SHA256SUMS.txt)
+- [下载 ver1.3.1 独立 EXE](https://github.com/relsx/feng-c-practice/releases/download/ver1.3.1/Feng_C_Practice_ver1.3.1.exe)
+- [完整发布包：EXE、源码与文档](https://github.com/relsx/feng-c-practice/releases/download/ver1.3.1/Feng_C_Practice_ver1.3.1_full.zip)
+- [Release 与校验文件](https://github.com/relsx/feng-c-practice/releases/tag/ver1.3.1)
 
-本版程序与源码已上传仓库。Release待网络恢复后发布，届时软件内检查更新可获取本版。
-
-需64位Windows及.NET Framework 4.8。无需另装C编译器，离线支持中文与English。运行本版保留草稿、成绩及暗域进度。
+需64位Windows及.NET Framework 4.8。无需另装C编译器，离线支持中文与English。旧版可在设置→检查更新获取本版，保留草稿、成绩及暗域进度。
 
 ## 本版更新
 
