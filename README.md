@@ -1,6 +1,6 @@
 # Feng's C语言练习器
 
-**ver1.3.1 · Windows 离线 C 语言练习与自动评测工具**
+**ver1.3.2 · Windows 离线 C 语言练习与自动评测工具**
 
 > By Feng · 仅供学习使用
 
@@ -8,13 +8,23 @@
 
 ## 下载与更新
 
-- [下载 ver1.3.1 独立 EXE](https://github.com/relsx/feng-c-practice/releases/download/ver1.3.1/Feng_C_Practice_ver1.3.1.exe)
-- [完整发布包：EXE、源码与文档](https://github.com/relsx/feng-c-practice/releases/download/ver1.3.1/Feng_C_Practice_ver1.3.1_full.zip)
-- [Release 与校验文件](https://github.com/relsx/feng-c-practice/releases/tag/ver1.3.1)
+ver1.3.2 源码已上传。可在 Releases 查看当前正式版。
 
-需64位Windows及.NET Framework 4.8。无需另装C编译器，离线支持中文与English。旧版可在设置→检查更新获取本版，保留草稿、成绩及暗域进度。
+- [GitHub Releases](https://github.com/relsx/feng-c-practice/releases/latest)
 
-## 本版更新
+需64位Windows及.NET Framework 4.8。
+
+## ver1.3.2 新增
+
+- 支持英文 `()`、`[]`、`{}`、双引号和单引号，以及中文/全角 `（）`、`［］`、`｛｝`、`“”`、`‘’`、`【】`、`「」`、`『』`。
+- 输入左符号后自动插入右符号，光标留在中间。已有右符号时，再输入对应右符号会向后跳过，避免重复。
+- 空符号对中按Backspace同时删除两侧；选中代码后输入左符号可包围选中内容。
+- 补全、包围及成对删除支持撤回/重做；注释、字符串、字符常量及转义引号按上下文处理。
+- 普通练习和暗域共用此功能，参考答案只读区不响应输入；粘贴、导入代码保持原内容。
+
+中文及全角符号保持原样补全，不自动转换。编译C代码时请使用英文半角括号和引号。
+
+## ver1.3.1 题库更新
 
 - 普通题90→150题，新增60道情境练习，149份参考答案仅需stdio.h。
 - 按难度和知识依赖重新编排11个阶段，从输入输出逐步进阶至综合项目；148～150题为项目考试。
@@ -36,7 +46,7 @@
 - [重排前后题号对照](docs/题号对照表.md)
 - [新增60题情境与提示](docs/新增60题.md)
 - [更新日志](CHANGELOG.md)
-- [验证报告](docs/验证报告.txt)
+- [ver1.3.2 验证报告](docs/验证报告-ver1.3.2.txt)
 
 重排后200题共7280组随机/边界用例通过，暗域450项与旧版一致；3672个光标命中点检查通过。另保留原编辑器界面回归1824点验证记录。
 

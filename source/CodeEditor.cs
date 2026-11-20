@@ -10,7 +10,7 @@ using System.IO;
 using System.Windows.Input;
 sealed class EditorInput : TextEditor {
  public event EventHandler SelectionChanged;
- public EditorInput(){TextArea.SelectionChanged+=(s,e)=>{if(SelectionChanged!=null)SelectionChanged(this,e);};TextArea.Caret.PositionChanged+=(s,e)=>{if(SelectionChanged!=null)SelectionChanged(this,e);};}
+ public EditorInput(){PairCompletion.Attach(this);TextArea.SelectionChanged+=(s,e)=>{if(SelectionChanged!=null)SelectionChanged(this,e);};TextArea.Caret.PositionChanged+=(s,e)=>{if(SelectionChanged!=null)SelectionChanged(this,e);};}
  public int CaretIndex{get{return CaretOffset;}set{CaretOffset=value;}}
  public int GetLineIndexFromCharacterIndex(int i){return Document.GetLineByOffset(Math.Max(0,Math.Min(i,Document.TextLength))).LineNumber-1;}
  public int GetCharacterIndexFromLineIndex(int i){return Document.GetLineByNumber(i+1).Offset;}

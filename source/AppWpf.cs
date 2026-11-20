@@ -107,6 +107,7 @@ static class Program {
   if(args.Length>=2&&args[0]=="--v13-regression"){V13Checks.Regression(args[1]);return;}
   if(args.Length>=2&&args[0]=="--v13-core-test"){V13Checks.Core(args[1]);return;}
   var app=new Application{ShutdownMode=ShutdownMode.OnMainWindowClose};Theme.Install();
+  if(args.Length>=2&&args[0]=="--v132-ui-test"){V132Checks.UI(app,args[1]);return;}
   if(args.Length>=2&&args[0]=="--v131-ui-test"){V131Checks.UI(app,args[1]);return;}
   if(args.Length>=2&&args[0]=="--v13-flow-test"){V13WorkflowChecks.Run(app,args[1]);return;}
   if(args.Length>=2&&args[0]=="--v13-ui-test"){V13Checks.UI(app,args[1]);return;}
