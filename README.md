@@ -8,11 +8,11 @@
 
 ## 下载与更新
 
-ver1.3.2 源码已上传。可在 Releases 查看当前正式版。
+- [下载 ver1.3.2 独立 EXE](https://github.com/relsx/feng-c-practice/releases/download/ver1.3.2/Feng_C_Practice_ver1.3.2.exe)
+- [完整发布包：EXE、源码与文档](https://github.com/relsx/feng-c-practice/releases/download/ver1.3.2/Feng_C_Practice_ver1.3.2_full.zip)
+- [Release 与校验文件](https://github.com/relsx/feng-c-practice/releases/tag/ver1.3.2)
 
-- [GitHub Releases](https://github.com/relsx/feng-c-practice/releases/latest)
-
-需64位Windows及.NET Framework 4.8。
+需64位Windows及.NET Framework 4.8。无需另装C编译器，离线支持中文与English。旧版可在设置→检查更新获取本版，保留草稿、成绩及暗域进度。
 
 ## ver1.3.2 新增
 
